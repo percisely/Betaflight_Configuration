@@ -1,0 +1,206 @@
+# version
+# Betaflight / RADIX (RADIX) 4.0.4 Jul  2 2019 / 17:32:29 (be3ca34ba) MSP API: 1.41
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name RADIX
+manufacturer_id 
+mcu_id 003400333237511531363338
+signature 
+
+# name
+name GreenSkll
+
+# resources
+resource MOTOR 1 A10
+resource MOTOR 2 A02
+resource MOTOR 3 A15
+resource MOTOR 4 A03
+
+# timer
+
+# dma
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature TELEMETRY
+feature ESC_SENSOR
+
+# beeper
+
+# beacon
+
+# map
+map TAER1234
+
+# serial
+serial 0 2048 115200 57600 0 115200
+serial 3 1024 115200 9600 0 115200
+serial 5 2 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1950 2050 0 0
+aux 1 1 1 925 1050 0 0
+aux 2 13 2 1950 2075 0 0
+aux 3 35 1 1450 1550 0 0
+aux 4 36 2 925 1050 0 0
+aux 5 37 3 1300 1700 0 0
+aux 6 39 3 1950 2075 0 0
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# display_name
+
+# master
+set gyro_lowpass_hz = 250
+set gyro_lowpass2_type = BIQUAD
+set gyro_lowpass2_hz = 0
+set dyn_lpf_gyro_min_hz = 180
+set acc_calibration = 97,-164,-14
+set rssi_channel = 12
+set min_throttle = 1080
+set dshot_idle_value = 600
+set bat_capacity = 1300
+set battery_meter = ESC
+set ibata_scale = 155
+set beeper_dshot_beacon_tone = 4
+set yaw_motors_reversed = ON
+set small_angle = 180
+set gps_provider = UBLOX
+set osd_units = IMPERIAL
+set osd_warn_core_temp = OFF
+set osd_cap_alarm = 500
+set osd_alt_alarm = 400
+set osd_tim1 = 1281
+set osd_vbat_pos = 2048
+set osd_rssi_pos = 2265
+set osd_tim_1_pos = 2080
+set osd_tim_2_pos = 33
+set osd_flymode_pos = 65
+set osd_throttle_pos = 233
+set osd_mah_drawn_pos = 192
+set osd_craft_name_pos = 362
+set osd_gps_speed_pos = 22
+set osd_gps_lon_pos = 369
+set osd_gps_lat_pos = 354
+set osd_gps_sats_pos = 2432
+set osd_home_dir_pos = 2094
+set osd_home_dist_pos = 2061
+set osd_altitude_pos = 2456
+set osd_debug_pos = 387
+set osd_warnings_pos = 2377
+set osd_avg_cell_voltage_pos = 2242
+set osd_esc_tmp_pos = 2427
+set osd_stat_max_dist = ON
+set osd_stat_max_alt = ON
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 2
+set vtx_freq = 5917
+set vcd_video_system = NTSC
+set displayport_max7456_blk = 1
+set brainfpv_osd_white_level = 100
+set brainfpv_osd_black_level = 40
+set brainfpv_osd_x_scale = 6
+set brainfpv_osd_font = 1
+set brainfpv_altitude_scale = 0
+set brainfpv_speed_scale = 0
+set brainfpv_spectrograph = 1
+
+# profile
+profile 0
+
+set dyn_lpf_dterm_min_hz = 80
+set dterm_lowpass_hz = 110
+set dterm_lowpass2_type = BIQUAD
+set dterm_lowpass2_hz = 0
+set feedforward_transition = 35
+set iterm_rotation = ON
+set iterm_relax = RPY
+set p_pitch = 56
+set i_pitch = 78
+set d_pitch = 55
+set f_pitch = 65
+set p_roll = 51
+set i_roll = 62
+set d_roll = 49
+set f_roll = 65
+set d_min_roll = 40
+set d_min_pitch = 46
+set d_min_boost_gain = 30
+set d_min_advance = 2
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+set thr_expo = 10
+set roll_rc_rate = 201
+set pitch_rc_rate = 199
+set yaw_rc_rate = 140
+set roll_expo = 80
+set pitch_expo = 80
+set yaw_expo = 35
+set roll_srate = 50
+set pitch_srate = 46
+set yaw_srate = 75
+set tpa_rate = 70
+set tpa_breakpoint = 1400
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
