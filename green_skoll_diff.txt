@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.0.4 Jul  2 2019 / 17:32:29 (be3ca34ba) MSP API: 1.41
+# Betaflight / RADIX (RADIX) 4.1.0 Oct  2 2019 / 17:13:08 (4a99bef0e) MSP API: 1.42
 
 # start the command batch
 batch start
@@ -8,12 +8,10 @@ batch start
 defaults nosave
 
 board_name RADIX
-manufacturer_id 
 mcu_id 003400333237511531363338
 signature 
 
-# name
-name GreenSkll
+# name: GreenSkll
 
 # resources
 resource MOTOR 1 A10
@@ -21,24 +19,9 @@ resource MOTOR 2 A02
 resource MOTOR 3 A15
 resource MOTOR 4 A03
 
-# timer
-
-# dma
-
-# mixer
-
-# servo
-
-# servo mix
-
-
 # feature
 feature TELEMETRY
 feature ESC_SENSOR
-
-# beeper
-
-# beacon
 
 # map
 map TAER1234
@@ -47,12 +30,6 @@ map TAER1234
 serial 0 2048 115200 57600 0 115200
 serial 3 1024 115200 9600 0 115200
 serial 5 2 115200 57600 0 115200
-
-# led
-
-# color
-
-# mode_color
 
 # aux
 aux 0 0 0 1950 2050 0 0
@@ -63,32 +40,39 @@ aux 4 36 2 925 1050 0 0
 aux 5 37 3 1300 1700 0 0
 aux 6 39 3 1950 2075 0 0
 
-# adjrange
-
-# rxrange
-
-# vtx
-
-# rxfail
-
-# display_name
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 0 1 2
+vtxtable powerlabels 25 200 500
 
 # master
-set gyro_lowpass_hz = 250
-set gyro_lowpass2_type = BIQUAD
-set gyro_lowpass2_hz = 0
-set dyn_lpf_gyro_min_hz = 180
-set acc_calibration = 97,-164,-14
-set rssi_channel = 12
-set min_throttle = 1080
+set gyro_lowpass2_hz = 300
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set dyn_lpf_gyro_min_hz = 240
+set dyn_lpf_gyro_max_hz = 600
+set acc_calibration = 157,-201,-90
+set rc_interp = MANUAL
+set rc_smoothing_input_hz = 50
+set rc_smoothing_derivative_hz = 100
+set rc_smoothing_input_type = PT1
+set rc_smoothing_derivative_type = PT1
 set dshot_idle_value = 600
+set dshot_bidir = ON
 set bat_capacity = 1300
 set battery_meter = ESC
 set ibata_scale = 155
-set beeper_dshot_beacon_tone = 4
+set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
-set gps_provider = UBLOX
 set osd_units = IMPERIAL
 set osd_warn_core_temp = OFF
 set osd_cap_alarm = 500
@@ -127,45 +111,52 @@ set brainfpv_osd_x_scale = 6
 set brainfpv_osd_font = 1
 set brainfpv_altitude_scale = 0
 set brainfpv_speed_scale = 0
-set brainfpv_spectrograph = 1
+set name = GreenSkll
 
-# profile
 profile 0
 
-set dyn_lpf_dterm_min_hz = 80
-set dterm_lowpass_hz = 110
-set dterm_lowpass2_type = BIQUAD
-set dterm_lowpass2_hz = 0
-set feedforward_transition = 35
-set iterm_rotation = ON
-set iterm_relax = RPY
-set p_pitch = 56
-set i_pitch = 78
-set d_pitch = 55
+# profile 0
+set feedforward_transition = 100
+set i_pitch = 91
+set d_pitch = 40
 set f_pitch = 65
-set p_roll = 51
-set i_roll = 62
-set d_roll = 49
+set i_roll = 87
+set d_roll = 38
 set f_roll = 65
-set d_min_roll = 40
-set d_min_pitch = 46
+set d_min_roll = 30
+set d_min_pitch = 33
 set d_min_boost_gain = 30
-set d_min_advance = 2
+set d_min_advance = 23
 
-# profile
 profile 1
 
+# profile 1
+set dyn_lpf_dterm_min_hz = 84
+set dyn_lpf_dterm_max_hz = 204
+set dterm_lowpass2_hz = 180
+set anti_gravity_gain = 5500
+set p_pitch = 70
+set i_pitch = 126
+set d_pitch = 53
+set f_pitch = 94
+set p_roll = 64
+set i_roll = 119
+set d_roll = 49
+set f_roll = 88
+set p_yaw = 42
+set i_yaw = 126
+set f_yaw = 113
+set d_min_roll = 28
+set d_min_pitch = 31
 
-# profile
 profile 2
 
-
 # restore original profile selection
-profile 0
+profile 1
 
-# rateprofile
 rateprofile 0
 
+# rateprofile 0
 set thr_expo = 10
 set roll_rc_rate = 201
 set pitch_rc_rate = 199
@@ -177,30 +168,16 @@ set roll_srate = 50
 set pitch_srate = 46
 set yaw_srate = 75
 set tpa_rate = 70
-set tpa_breakpoint = 1400
 
-# rateprofile
 rateprofile 1
 
-
-# rateprofile
 rateprofile 2
 
-
-# rateprofile
 rateprofile 3
 
-
-# rateprofile
 rateprofile 4
 
-
-# rateprofile
 rateprofile 5
-
 
 # restore original rateprofile selection
 rateprofile 0
-
-# save configuration
-save

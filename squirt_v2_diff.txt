@@ -1,0 +1,139 @@
+# version
+# Betaflight / RADIX (RADIX) 3.5.6 Feb 18 2019 / 12:10:27 (7fbee9644) MSP API: 1.40
+
+board_name RADIX
+manufacturer_id 
+
+# name
+name quirts
+
+# resources
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PPM
+feature RX_SERIAL
+feature TELEMETRY
+feature AIRMODE
+
+# beeper
+
+# beacon
+beacon RX_SET
+
+# map
+map TAER1234
+
+# serial
+serial 20 129 115200 57600 0 115200
+serial 0 2048 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+serial 5 32 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1950 2050 0 0
+aux 1 1 1 925 1050 0 0
+aux 2 13 2 1950 2075 0 0
+aux 3 35 1 1450 1550 0 0
+aux 4 36 2 925 1050 0 0
+aux 5 37 3 1300 1700 0 0
+aux 6 39 3 1950 2075 0 0
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# master
+set acc_calibration = -134,-98,-37
+set rssi_channel = 12
+set serialrx_provider = CRSF
+set motor_pwm_protocol = DSHOT600
+set align_board_yaw = 90
+set yaw_motors_reversed = ON
+set osd_units = IMPERIAL
+set osd_warn_core_temp = OFF
+set osd_rssi_alarm = 70
+set osd_cap_alarm = 500
+set osd_alt_alarm = 400
+set osd_tim1 = 1281
+set osd_vbat_pos = 2241
+set osd_rssi_pos = 2266
+set osd_tim_1_pos = 2080
+set osd_tim_2_pos = 33
+set osd_flymode_pos = 65
+set osd_throttle_pos = 233
+set osd_current_pos = 353
+set osd_mah_drawn_pos = 0
+set osd_craft_name_pos = 362
+set osd_gps_speed_pos = 22
+set osd_gps_lon_pos = 369
+set osd_gps_lat_pos = 354
+set osd_gps_sats_pos = 384
+set osd_home_dir_pos = 2094
+set osd_home_dist_pos = 2061
+set osd_altitude_pos = 2456
+set osd_warnings_pos = 2377
+set osd_avg_cell_voltage_pos = 76
+set osd_esc_tmp_pos = 379
+set osd_stat_max_dist = ON
+set osd_stat_max_alt = ON
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_freq = 5695
+set brainfpv_osd_white_level = 100
+set brainfpv_osd_black_level = 40
+set brainfpv_osd_x_scale = 6
+set brainfpv_osd_font = 1
+set brainfpv_altitude_scale = 0
+set brainfpv_speed_scale = 0
+set brainfpv_show_pilot_logo = 0
+set brainfpv_spectrograph = 1
+
+# profile
+profile 0
+
+set dterm_notch_cutoff = 0
+set feedforward_transition = 51
+set iterm_rotation = OFF
+set iterm_relax = RPY
+set p_pitch = 53
+set i_pitch = 55
+set d_pitch = 29
+set f_pitch = 90
+set p_roll = 50
+set i_roll = 52
+set d_roll = 30
+set f_roll = 90
+set i_yaw = 88
+set f_yaw = 94
+
+# rateprofile
+rateprofile 0
+
+set thr_mid = 10
+set thr_expo = 10
+set roll_rc_rate = 150
+set pitch_rc_rate = 150
+set yaw_rc_rate = 140
+set roll_expo = 85
+set pitch_expo = 85
+set yaw_expo = 35
+set roll_srate = 20
+set pitch_srate = 20
+set yaw_srate = 50
