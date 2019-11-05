@@ -18,6 +18,8 @@ resource MOTOR 1 A03
 resource MOTOR 2 A15
 resource MOTOR 3 A02
 resource MOTOR 4 A10
+resource SERIAL_RX 6 NONE
+resource PINIO 1 C06
 
 # feature
 feature TELEMETRY
@@ -37,11 +39,9 @@ serial 5 2 115200 57600 0 115200
 # aux
 aux 0 0 0 1950 2050 0 0
 aux 1 1 1 925 1050 0 0
-aux 2 13 2 1950 2075 0 0
-aux 3 35 1 1450 1550 0 0
-aux 4 36 2 925 1050 0 0
-aux 5 37 3 1300 1700 0 0
-aux 6 39 3 1950 2075 0 0
+aux 2 35 1 1450 1550 0 0
+aux 3 36 2 925 1050 0 0
+aux 4 40 0 1400 2100 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -109,6 +109,7 @@ set vtx_power = 2
 set vtx_freq = 5917
 set vcd_video_system = NTSC
 set displayport_max7456_blk = 1
+set pinio_box = 40,41,42,43
 set brainfpv_osd_white_level = 100
 set brainfpv_osd_black_level = 40
 set brainfpv_osd_x_scale = 6
