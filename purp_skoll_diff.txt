@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.1.0 Oct 15 2019 / 13:37:32 (019b77eed) MSP API: 1.42
+# Betaflight / RADIX (RADIX) 4.1.0 Nov  7 2019 / 09:46:07 (7eef88585) MSP API: 1.42
 
 # start the command batch
 batch start
