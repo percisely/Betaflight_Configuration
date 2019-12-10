@@ -23,6 +23,9 @@ resource MOTOR 4 A03
 feature TELEMETRY
 feature ESC_SENSOR
 
+# beacon
+beacon RX_SET
+
 # map
 map TAER1234
 
@@ -59,7 +62,7 @@ set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
 set dyn_lpf_gyro_min_hz = 240
 set dyn_lpf_gyro_max_hz = 600
-set acc_calibration = 157,-201,-90
+set acc_calibration = 188,-75,-162
 set rc_interp = MANUAL
 set rc_smoothing_input_hz = 50
 set rc_smoothing_derivative_hz = 100
@@ -67,6 +70,7 @@ set rc_smoothing_input_type = PT1
 set rc_smoothing_derivative_type = PT1
 set dshot_idle_value = 600
 set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
 set bat_capacity = 1300
 set battery_meter = ESC
 set ibata_scale = 155
@@ -135,19 +139,21 @@ set dyn_lpf_dterm_min_hz = 84
 set dyn_lpf_dterm_max_hz = 204
 set dterm_lowpass2_hz = 180
 set anti_gravity_gain = 5500
-set p_pitch = 70
+set p_pitch = 83
 set i_pitch = 126
 set d_pitch = 53
-set f_pitch = 94
-set p_roll = 64
+set f_pitch = 133
+set p_roll = 77
 set i_roll = 119
 set d_roll = 49
-set f_roll = 88
+set f_roll = 126
 set p_yaw = 42
 set i_yaw = 126
-set f_yaw = 113
+set f_yaw = 126
 set d_min_roll = 28
 set d_min_pitch = 31
+set d_min_boost_gain = 32
+set d_min_advance = 27
 
 profile 2
 
@@ -181,3 +187,6 @@ rateprofile 5
 
 # restore original rateprofile selection
 rateprofile 0
+
+# save configuration
+save
