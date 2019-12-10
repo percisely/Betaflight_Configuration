@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.1.0 Oct  2 2019 / 17:13:08 (4a99bef0e) MSP API: 1.42
+# Betaflight / RADIX (RADIX) 4.1.1 Nov 26 2019 / 15:38:18 (5dca71fa5) MSP API: 1.42
 
 # start the command batch
 batch start
@@ -72,6 +72,7 @@ set dshot_idle_value = 600
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set bat_capacity = 1300
+set vbat_max_cell_voltage = 440
 set battery_meter = ESC
 set ibata_scale = 155
 set beeper_dshot_beacon_tone = 3
@@ -120,21 +121,6 @@ set name = GreenSkll
 profile 0
 
 # profile 0
-set feedforward_transition = 100
-set i_pitch = 91
-set d_pitch = 40
-set f_pitch = 65
-set i_roll = 87
-set d_roll = 38
-set f_roll = 65
-set d_min_roll = 30
-set d_min_pitch = 33
-set d_min_boost_gain = 30
-set d_min_advance = 23
-
-profile 1
-
-# profile 1
 set dyn_lpf_dterm_min_hz = 84
 set dyn_lpf_dterm_max_hz = 204
 set dterm_lowpass2_hz = 180
@@ -154,6 +140,31 @@ set d_min_roll = 28
 set d_min_pitch = 31
 set d_min_boost_gain = 32
 set d_min_advance = 27
+set auto_profile_cell_count = 4
+
+profile 1
+
+# profile 1
+set dyn_lpf_dterm_min_hz = 84
+set dyn_lpf_dterm_max_hz = 204
+set dterm_lowpass2_hz = 180
+set anti_gravity_gain = 5500
+set p_pitch = 71
+set i_pitch = 108
+set d_pitch = 46
+set f_pitch = 114
+set p_roll = 66
+set i_roll = 102
+set d_roll = 42
+set f_roll = 108
+set p_yaw = 36
+set i_yaw = 108
+set f_yaw = 108
+set d_min_roll = 24
+set d_min_pitch = 26
+set d_min_boost_gain = 32
+set d_min_advance = 27
+set auto_profile_cell_count = 5
 
 profile 2
 
