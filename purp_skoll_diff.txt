@@ -150,11 +150,11 @@ set dyn_lpf_dterm_min_hz = 140
 set dyn_lpf_dterm_max_hz = 340
 set dterm_lowpass2_hz = 300
 set anti_gravity_gain = 5500
-set p_pitch = 70
+set p_pitch = 65
 set i_pitch = 99
 set d_pitch = 42
 set f_pitch = 74
-set p_roll = 65
+set p_roll = 61
 set i_roll = 94
 set d_roll = 39
 set f_roll = 69
@@ -165,6 +165,7 @@ set d_min_roll = 22
 set d_min_pitch = 24
 set d_min_boost_gain = 33
 set d_min_advance = 27
+set motor_output_limit = 80
 set auto_profile_cell_count = 5
 
 profile 2
