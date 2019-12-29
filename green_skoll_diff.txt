@@ -57,11 +57,11 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 200 500
 
 # master
-set gyro_lowpass2_hz = 300
+set gyro_lowpass2_hz = 500
 set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
-set dyn_lpf_gyro_min_hz = 240
-set dyn_lpf_gyro_max_hz = 600
+set dyn_lpf_gyro_min_hz = 400
+set dyn_lpf_gyro_max_hz = 1000
 set acc_calibration = 188,-75,-162
 set rc_interp = MANUAL
 set rc_smoothing_input_hz = 50
@@ -121,9 +121,9 @@ set name = GreenSkll
 profile 0
 
 # profile 0
-set dyn_lpf_dterm_min_hz = 84
-set dyn_lpf_dterm_max_hz = 204
-set dterm_lowpass2_hz = 180
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dterm_lowpass2_hz = 300
 set anti_gravity_gain = 5500
 set p_pitch = 83
 set i_pitch = 126
@@ -145,9 +145,9 @@ set auto_profile_cell_count = 4
 profile 1
 
 # profile 1
-set dyn_lpf_dterm_min_hz = 84
-set dyn_lpf_dterm_max_hz = 204
-set dterm_lowpass2_hz = 180
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dterm_lowpass2_hz = 300
 set anti_gravity_gain = 5500
 set p_pitch = 71
 set i_pitch = 108
@@ -168,6 +168,29 @@ set auto_profile_cell_count = 5
 
 profile 2
 
+# profile 2
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dterm_lowpass2_hz = 300
+set anti_gravity_gain = 5500
+set p_pitch = 71
+set i_pitch = 108
+set d_pitch = 46
+set f_pitch = 114
+set p_roll = 66
+set i_roll = 102
+set d_roll = 42
+set f_roll = 108
+set p_yaw = 36
+set i_yaw = 108
+set f_yaw = 108
+set d_min_roll = 24
+set d_min_pitch = 26
+set d_min_boost_gain = 32
+set d_min_advance = 27
+set motor_output_limit = 80
+set auto_profile_cell_count = 5
+
 # restore original profile selection
 profile 1
 
@@ -181,9 +204,8 @@ set yaw_rc_rate = 140
 set roll_expo = 80
 set pitch_expo = 80
 set yaw_expo = 35
-set roll_srate = 50
-set pitch_srate = 46
-set yaw_srate = 75
+set roll_srate = 40
+set pitch_srate = 40
 set tpa_rate = 70
 
 rateprofile 1
