@@ -152,6 +152,7 @@ set dyn_lpf_dterm_min_hz = 140
 set dyn_lpf_dterm_max_hz = 340
 set dterm_lowpass2_hz = 300
 set anti_gravity_gain = 5500
+set feedforward_transition = 40
 set p_pitch = 65
 set i_pitch = 99
 set d_pitch = 42
