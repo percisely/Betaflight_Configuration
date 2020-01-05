@@ -3,6 +3,11 @@
 
 board_name RADIX
 manufacturer_id 
+mcu_id 002900543537510c32323532
+signature 
+
+# reset configuration to default settings
+defaults nosave
 
 # name
 name quirts
@@ -94,15 +99,21 @@ set osd_esc_tmp_pos = 379
 set osd_stat_max_dist = ON
 set osd_stat_max_alt = ON
 set vtx_band = 5
-set vtx_channel = 2
-set vtx_freq = 5695
+set vtx_channel = 8
+set vtx_power = 2
+set vtx_freq = 5917
 set brainfpv_osd_white_level = 100
 set brainfpv_osd_black_level = 40
-set brainfpv_osd_x_scale = 6
+set brainfpv_osd_x_offset = 4
+set brainfpv_osd_x_scale = 9
 set brainfpv_osd_font = 1
 set brainfpv_altitude_scale = 0
 set brainfpv_speed_scale = 0
 set brainfpv_show_pilot_logo = 0
+set brainfpv_hd_frame_width = 170
+set brainfpv_hd_frame_height = 104
+set brainfpv_hd_frame_h_offset = -100
+set brainfpv_hd_frame_v_offset = -35
 set brainfpv_spectrograph = 1
 
 # profile
@@ -113,15 +124,26 @@ set feedforward_transition = 51
 set iterm_rotation = OFF
 set iterm_relax = RPY
 set p_pitch = 53
-set i_pitch = 55
+set i_pitch = 57
 set d_pitch = 29
 set f_pitch = 90
 set p_roll = 50
-set i_roll = 52
+set i_roll = 54
 set d_roll = 30
 set f_roll = 90
-set i_yaw = 88
+set i_yaw = 100
 set f_yaw = 94
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
 
 # rateprofile
 rateprofile 0
@@ -137,3 +159,29 @@ set yaw_expo = 35
 set roll_srate = 20
 set pitch_srate = 20
 set yaw_srate = 50
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
