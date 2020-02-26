@@ -55,9 +55,9 @@ vtxtable powervalues 14 20 26
 vtxtable powerlabels 25 100 400
 
 # master
-set gyro_lowpass2_hz = 325
-set dyn_lpf_gyro_min_hz = 260
-set dyn_lpf_gyro_max_hz = 650
+set gyro_lowpass2_hz = 500
+set dyn_lpf_gyro_min_hz = 400
+set dyn_lpf_gyro_max_hz = 1000
 set acc_calibration = 297,-32,-37
 set rc_interp = MANUAL
 set rc_smoothing_input_hz = 50
@@ -117,9 +117,9 @@ set name = unibody_skoll
 profile 0
 
 # profile 0
-set dyn_lpf_dterm_min_hz = 91
-set dyn_lpf_dterm_max_hz = 221
-set dterm_lowpass2_hz = 195
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dterm_lowpass2_hz = 300
 set anti_gravity_gain = 5500
 set feedforward_transition = 40
 set p_pitch = 59
