@@ -70,6 +70,7 @@ set dshot_bidir = ON
 set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
 set motor_pwm_rate = 480
+set bat_capacity = 1100
 set vbat_max_cell_voltage = 440
 set ibata_scale = 117
 set beeper_dshot_beacon_tone = 3
