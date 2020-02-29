@@ -8,7 +8,7 @@ batch start
 defaults nosave
 
 board_name RADIX
-mcu_id 0035001e3138510430343432
+mcu_id 003000483138510430343432
 signature 
 
 # name: unibody_skoll
@@ -64,7 +64,7 @@ set rc_smoothing_input_hz = 50
 set rc_smoothing_derivative_hz = 100
 set rc_smoothing_input_type = PT1
 set rc_smoothing_derivative_type = PT1
-set min_throttle = 1070
+set min_throttle = 1090
 set dshot_idle_value = 600
 set dshot_bidir = ON
 set use_unsynced_pwm = OFF
@@ -120,18 +120,20 @@ profile 0
 set dyn_lpf_dterm_min_hz = 140
 set dyn_lpf_dterm_max_hz = 340
 set dterm_lowpass2_hz = 300
-set anti_gravity_gain = 5500
+set anti_gravity_gain = 6000
 set feedforward_transition = 40
-set p_pitch = 59
+set p_pitch = 53
 set d_pitch = 49
 set f_pitch = 57
-set p_roll = 55
+set p_roll = 50
 set d_roll = 46
 set f_roll = 54
 set p_yaw = 39
 set f_yaw = 78
 set d_min_roll = 26
 set d_min_pitch = 29
+set d_min_boost_gain = 30
+set d_min_advance = 60
 
 profile 1
 
