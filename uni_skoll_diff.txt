@@ -64,7 +64,7 @@ set rc_smoothing_input_hz = 50
 set rc_smoothing_derivative_hz = 100
 set rc_smoothing_input_type = PT1
 set rc_smoothing_derivative_type = PT1
-set min_throttle = 1090
+set min_throttle = 1099
 set dshot_idle_value = 600
 set dshot_bidir = ON
 set use_unsynced_pwm = OFF
@@ -112,6 +112,7 @@ set brainfpv_osd_x_scale = 6
 set brainfpv_osd_font = 1
 set brainfpv_altitude_scale = 0
 set brainfpv_speed_scale = 0
+set brainfpv_spectrograph = 1
 set name = unibody_skoll
 
 profile 0
@@ -155,7 +156,7 @@ set yaw_expo = 35
 set roll_srate = 40
 set pitch_srate = 40
 set yaw_srate = 60
-set tpa_rate = 70
+set tpa_rate = 80
 
 rateprofile 1
 
