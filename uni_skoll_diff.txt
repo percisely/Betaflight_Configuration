@@ -21,7 +21,6 @@ resource MOTOR 4 A03
 
 # feature
 feature TELEMETRY
-feature ESC_SENSOR
 
 # beacon
 beacon RX_SET
@@ -121,23 +120,23 @@ profile 0
 set dyn_lpf_dterm_min_hz = 140
 set dyn_lpf_dterm_max_hz = 340
 set dterm_lowpass2_hz = 300
-set anti_gravity_gain = 6000
+set anti_gravity_gain = 6600
 set feedforward_transition = 40
-set p_pitch = 54
+set p_pitch = 60
 set i_pitch = 108
 set d_pitch = 50
-set f_pitch = 68
-set p_roll = 50
+set f_pitch = 114
+set p_roll = 56
 set i_roll = 102
 set d_roll = 47
-set f_roll = 65
+set f_roll = 108
 set p_yaw = 40
 set i_yaw = 108
-set f_yaw = 94
+set f_yaw = 108
 set d_min_roll = 26
 set d_min_pitch = 29
 set d_min_boost_gain = 30
-set d_min_advance = 60
+set d_min_advance = 70
 
 profile 1
 
@@ -160,6 +159,7 @@ set roll_srate = 40
 set pitch_srate = 40
 set yaw_srate = 60
 set tpa_rate = 80
+set tpa_breakpoint = 1350
 
 rateprofile 1
 
