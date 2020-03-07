@@ -4,15 +4,20 @@
 # start the command batch
 batch start
 
+# reset configuration to default settings
+defaults nosave
+
 board_name RADIX
+mcu_id 003400333237511531363338
+signature 
 
 # name: GreenSkll
 
 # resources
-resource MOTOR 1 A10
-resource MOTOR 2 A02
-resource MOTOR 3 A15
-resource MOTOR 4 A03
+resource MOTOR 1 A03
+resource MOTOR 2 A15
+resource MOTOR 3 A02
+resource MOTOR 4 A10
 
 # feature
 feature TELEMETRY
@@ -26,7 +31,7 @@ map TAER1234
 
 # serial
 serial 0 2048 115200 57600 0 115200
-serial 3 1024 115200 9600 0 115200
+serial 3 1024 115200 57600 0 115200
 serial 5 2 115200 57600 0 115200
 
 # aux
@@ -113,6 +118,55 @@ set brainfpv_altitude_scale = 0
 set brainfpv_speed_scale = 0
 set name = GreenSkll
 
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dterm_lowpass2_hz = 300
+set anti_gravity_gain = 6600
+set feedforward_transition = 40
+set p_pitch = 60
+set i_pitch = 108
+set d_pitch = 50
+set f_pitch = 114
+set p_roll = 56
+set i_roll = 102
+set d_roll = 47
+set f_roll = 108
+set p_yaw = 40
+set i_yaw = 108
+set f_yaw = 108
+set d_min_roll = 26
+set d_min_pitch = 29
+set d_min_boost_gain = 30
+set d_min_advance = 70
+set auto_profile_cell_count = 4
+
+profile 1
+
+# profile 1
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dterm_lowpass2_hz = 300
+set anti_gravity_gain = 5500
+set p_pitch = 65
+set i_pitch = 99
+set d_pitch = 42
+set f_pitch = 74
+set p_roll = 61
+set i_roll = 94
+set d_roll = 39
+set f_roll = 69
+set p_yaw = 33
+set i_yaw = 99
+set f_yaw = 89
+set d_min_roll = 22
+set d_min_pitch = 24
+set d_min_boost_gain = 32
+set d_min_advance = 27
+set auto_profile_cell_count = 5
+
 profile 2
 
 # profile 2
@@ -135,6 +189,9 @@ set d_min_boost_gain = 32
 set d_min_advance = 27
 set auto_profile_cell_count = 6
 
+# restore original profile selection
+profile 0
+
 rateprofile 0
 
 # rateprofile 0
@@ -150,5 +207,18 @@ set pitch_srate = 35
 set yaw_srate = 60
 set tpa_rate = 70
 
-# end the command batch
-batch end
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
