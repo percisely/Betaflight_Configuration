@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.1.0 Nov  7 2019 / 09:46:07 (7eef88585) MSP API: 1.42
+# Betaflight / RADIX (RADIX) 4.1.1 Nov 26 2019 / 15:38:18 (5dca71fa5) MSP API: 1.42
 
 # start the command batch
 batch start
@@ -8,7 +8,7 @@ batch start
 defaults nosave
 
 board_name RADIX
-mcu_id 005000283038511130333332
+mcu_id 003400333237511531363338
 signature 
 
 # name: PurpSkoll
@@ -151,30 +151,30 @@ profile 1
 set dyn_lpf_dterm_min_hz = 140
 set dyn_lpf_dterm_max_hz = 340
 set dterm_lowpass2_hz = 300
-set anti_gravity_gain = 5500
+set anti_gravity_gain = 6000
 set feedforward_transition = 40
-set p_pitch = 65
-set i_pitch = 99
-set d_pitch = 42
-set f_pitch = 74
-set p_roll = 61
-set i_roll = 94
-set d_roll = 39
-set f_roll = 69
-set p_yaw = 33
-set i_yaw = 99
-set f_yaw = 89
-set d_min_roll = 22
-set d_min_pitch = 24
-set d_min_boost_gain = 33
-set d_min_advance = 27
+set p_pitch = 54
+set i_pitch = 108
+set d_pitch = 50
+set f_pitch = 68
+set p_roll = 50
+set i_roll = 102
+set d_roll = 47
+set f_roll = 65
+set p_yaw = 40
+set i_yaw = 108
+set f_yaw = 94
+set d_min_roll = 26
+set d_min_pitch = 29
+set d_min_boost_gain = 30
+set d_min_advance = 60
 set motor_output_limit = 80
 set auto_profile_cell_count = 5
 
 profile 2
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
