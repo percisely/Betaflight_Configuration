@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.1.1 Nov 26 2019 / 15:38:18 (5dca71fa5) MSP API: 1.42
+# Betaflight / RADIX (RADIX) 4.1.4 Feb 17 2020 / 17:07:59 (790cb8652) MSP API: 1.42
 
 # start the command batch
 batch start
@@ -36,7 +36,28 @@ aux 4 36 2 925 1050 0 0
 aux 5 37 3 1300 1700 0 0
 aux 6 39 3 1950 2075 0 0
 
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 0 1 2
+vtxtable powerlabels 25 200 500
+
 # master
+set gyro_lowpass2_hz = 375
+set dyn_notch_range = LOW
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 200
+set dyn_notch_min_hz = 90
+set dyn_lpf_gyro_min_hz = 300
+set dyn_lpf_gyro_max_hz = 750
+set acc_calibration = -196,-157,-34
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set align_board_yaw = 90
@@ -47,7 +68,7 @@ set osd_cap_alarm = 500
 set osd_alt_alarm = 400
 set osd_tim1 = 1281
 set osd_vbat_pos = 2241
-set osd_rssi_pos = 2266
+set osd_rssi_pos = 2265
 set osd_tim_1_pos = 2080
 set osd_tim_2_pos = 33
 set osd_flymode_pos = 65
@@ -67,28 +88,56 @@ set osd_avg_cell_voltage_pos = 76
 set osd_esc_tmp_pos = 379
 set osd_stat_max_dist = ON
 set osd_stat_max_alt = ON
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 2
+set vtx_freq = 5917
+set brainfpv_altitude_scale = 0
+set brainfpv_speed_scale = 0
+set brainfpv_map = 0
 set name = pluckyduct
 
 profile 0
 
 # profile 0
-set feedforward_transition = 100
-set p_pitch = 43
+set dyn_lpf_dterm_min_hz = 105
+set dyn_lpf_dterm_max_hz = 255
+set dterm_lowpass2_hz = 225
+set feedforward_transition = 40
+set p_pitch = 91
 set i_pitch = 108
-set d_pitch = 36
+set d_pitch = 50
 set f_pitch = 80
-set p_roll = 41
+set p_roll = 84
 set i_roll = 102
-set d_roll = 34
+set d_roll = 47
 set f_roll = 76
-set p_yaw = 29
+set p_yaw = 40
 set i_yaw = 108
 set f_yaw = 97
-set d_min_roll = 19
+set d_min_roll = 26
+set d_min_pitch = 29
 
 profile 1
 
 profile 2
+
+# profile 2
+set dyn_lpf_dterm_min_hz = 105
+set dyn_lpf_dterm_max_hz = 255
+set dterm_lowpass2_hz = 225
+set feedforward_transition = 100
+set p_pitch = 90
+set i_pitch = 60
+set d_pitch = 43
+set f_pitch = 200
+set p_roll = 70
+set i_roll = 65
+set d_roll = 39
+set f_roll = 200
+set p_yaw = 100
+set i_yaw = 114
+set f_yaw = 200
 
 # restore original profile selection
 profile 0
