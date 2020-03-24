@@ -11,10 +11,37 @@ board_name BEEBRAIN_BL_SBUS_US
 mcu_id 006a003f3038510b37363431
 signature 
 
-# name: BeeBrain BL
+# name: Social Distancer
+
+# beacon
+beacon RX_SET
+
+# map
+map TAER1234
 
 # serial
 serial 1 64 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1850 2025 0 0
+aux 1 1 1 975 1150 0 0
+aux 2 35 1 1400 1600 0 0
+aux 3 36 2 975 1150 0 0
+
+# vtxtable
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+
+# master
+set acc_calibration = 38,-6,147
+set osd_vbat_pos = 2049
+set osd_rssi_pos = 2299
+set osd_tim_2_pos = 2081
+set osd_flymode_pos = 305
+set osd_vtx_channel_pos = 364
+set osd_current_pos = 2496
+set osd_craft_name_pos = 488
+set vtx_power = 2
+set name = Social Distancer
 
 profile 0
 
@@ -26,6 +53,18 @@ profile 2
 profile 0
 
 rateprofile 0
+
+# rateprofile 0
+set thr_expo = 10
+set roll_rc_rate = 200
+set pitch_rc_rate = 200
+set yaw_rc_rate = 140
+set roll_expo = 80
+set pitch_expo = 80
+set yaw_expo = 35
+set roll_srate = 40
+set pitch_srate = 40
+set yaw_srate = 60
 
 rateprofile 1
 
