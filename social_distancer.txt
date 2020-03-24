@@ -1,0 +1,44 @@
+# version
+# Betaflight / BEEBRAIN_BL_SBUS_US (BBBL) 4.1.0 Dec 10 2019 / 12:31:05 (0110f8f01) MSP API: 1.42
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BEEBRAIN_BL_SBUS_US
+mcu_id 006a003f3038510b37363431
+signature 
+
+# name: BeeBrain BL
+
+# serial
+serial 1 64 115200 57600 0 115200
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
