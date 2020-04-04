@@ -27,11 +27,10 @@ serial 1 64 115200 57600 0 115200
 
 # aux
 aux 0 0 0 1850 2025 0 0
-aux 1 1 1 975 1150 0 0
-aux 2 28 1 1225 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 28 1 900 1600 0 0
 aux 3 30 1 900 2100 0 0
 aux 4 35 1 1400 1600 0 0
-aux 5 36 2 925 1200 0 0
 
 # adjrange
 adjrange 0 0 1 900 2100 12 1 0 0
@@ -67,11 +66,14 @@ set thrust_linear = 30
 set osd_vbat_pos = 2049
 set osd_rssi_pos = 2299
 set osd_tim_2_pos = 2081
-set osd_flymode_pos = 305
+set osd_flymode_pos = 2425
 set osd_vtx_channel_pos = 364
-set osd_current_pos = 2496
+set osd_current_pos = 2401
 set osd_craft_name_pos = 488
+set osd_warnings_pos = 2377
+set osd_disarmed_pos = 363
 set vtx_power = 2
+set vcd_video_system = NTSC
 set gyro_rpm_notch_harmonics = 2
 set name = Social Distancer
 
@@ -151,7 +153,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
