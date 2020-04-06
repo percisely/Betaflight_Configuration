@@ -59,7 +59,6 @@ set motor_pwm_protocol = DSHOT300
 set vbat_min_cell_voltage = 300
 set vbat_warning_cell_voltage = 300
 set vbat_scale = 109
-set ibata_scale = 8
 set yaw_motors_reversed = ON
 set runaway_takeoff_prevention = OFF
 set thrust_linear = 30
@@ -72,7 +71,7 @@ set osd_current_pos = 2401
 set osd_craft_name_pos = 488
 set osd_warnings_pos = 2377
 set osd_disarmed_pos = 363
-set vtx_power = 3
+set vtx_power = 2
 set vcd_video_system = NTSC
 set gyro_rpm_notch_harmonics = 2
 set name = Social Distancer
@@ -154,7 +153,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 2
+rateprofile 0
 
 # save configuration
 save
