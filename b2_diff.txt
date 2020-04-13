@@ -1,5 +1,5 @@
 # version
-# Betaflight / BEEBRAIN_BL_SBUS_US (BBBL) 4.1.0 Dec 10 2019 / 12:31:05 (0110f8f01) MSP API: 1.42
+# Betaflight / BEEBRAIN_BL_CRSF_US (BBBL) 4.1.0 Dec  9 2019 / 11:30:12 (02f8fb726) MSP API: 1.42
 
 # start the command batch
 batch start
@@ -7,7 +7,7 @@ batch start
 # reset configuration to default settings
 defaults nosave
 
-board_name BEEBRAIN_BL_SBUS_US
+board_name BEEBRAIN_BL_CRSF_US
 mcu_id 0053003f3038510b37363431
 signature 
 
@@ -22,8 +22,10 @@ beacon RX_SET
 # map
 map TAER1234
 
-# serial
-serial 1 64 115200 57600 0 115200
+# led
+led 0 7,7:U:CTB:4
+led 1 6,8:D:CT:4
+led 2 8,8:D:CT:4
 
 # aux
 aux 0 0 0 1850 2025 0 0
@@ -48,29 +50,46 @@ set acc_calibration = 38,-6,147
 set min_check = 1003
 set max_check = 2000
 set fpv_mix_degrees = 13
-set serialrx_provider = CRSF
 set airmode_start_throttle_percent = 55
 set min_throttle = 1008
 set dshot_idle_value = 1100
 set dshot_bidir = ON
-set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
-set motor_pwm_rate = 480
 set vbat_min_cell_voltage = 300
 set vbat_warning_cell_voltage = 300
 set vbat_scale = 109
 set yaw_motors_reversed = ON
 set runaway_takeoff_prevention = OFF
 set thrust_linear = 30
-set osd_vbat_pos = 2049
-set osd_rssi_pos = 2266
-set osd_tim_2_pos = 2081
+set osd_warn_link_quality = ON
+set osd_vbat_pos = 1
+set osd_rssi_pos = 218
+set osd_link_quality_pos = 10425
+set osd_tim_2_pos = 10241
 set osd_flymode_pos = 2425
-set osd_vtx_channel_pos = 364
+set osd_anti_gravity_pos = 8283
+set osd_g_force_pos = 8249
+set osd_throttle_pos = 8513
+set osd_vtx_channel_pos = 8545
+set osd_crosshairs_pos = 10445
+set osd_ah_sbar_pos = 8398
+set osd_ah_pos = 8270
 set osd_current_pos = 2401
-set osd_craft_name_pos = 488
-set osd_warnings_pos = 2377
+set osd_mah_drawn_pos = 8226
+set osd_craft_name_pos = 8211
+set osd_warnings_pos = 10377
+set osd_avg_cell_voltage_pos = 14337
 set osd_disarmed_pos = 363
+set osd_core_temp_pos = 8258
+set osd_stick_overlay_left_pos = 8423
+set osd_stick_overlay_right_pos = 8431
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_max_g_force = ON
+set osd_stat_min_link_quality = ON
 set vtx_power = 2
 set vcd_video_system = NTSC
 set gyro_rpm_notch_harmonics = 2
