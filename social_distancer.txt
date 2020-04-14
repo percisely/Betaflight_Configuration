@@ -1,5 +1,5 @@
 # version
-# Betaflight / BEEBRAIN_BL_SBUS_US (BBBL) 4.1.0 Dec 10 2019 / 12:31:05 (0110f8f01) MSP API: 1.42
+# Betaflight / BEEBRAIN_BL_SBUS_US (BBBL) 4.1.0 Nov 28 2019 / 17:32:57 (b59b7df46) MSP API: 1.42
 
 # start the command batch
 batch start
@@ -8,10 +8,10 @@ batch start
 defaults nosave
 
 board_name BEEBRAIN_BL_SBUS_US
-mcu_id 006a003f3038510b37363431
+mcu_id 002700293139511735343435
 signature 
 
-# name: Social Distancer
+# name: Social_Distancer
 
 # feature
 feature -AIRMODE
@@ -22,21 +22,21 @@ beacon RX_SET
 # map
 map TAER1234
 
-# serial
-serial 1 64 115200 57600 0 115200
+# led
+led 0 7,7:U:CTB:10
+led 1 6,8:D:CT:10
+led 2 8,8:D:CT:10
 
 # aux
 aux 0 0 0 1850 2025 0 0
-aux 1 1 1 1700 2100 0 0
-aux 2 28 1 900 1600 0 0
+aux 1 1 1 925 1050 0 0
+aux 2 28 1 1400 2100 0 0
 aux 3 30 1 900 2100 0 0
 aux 4 35 1 1400 1600 0 0
 
 # adjrange
 adjrange 0 0 1 900 2100 12 1 0 0
-
-# vtxtable
-vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+adjrange 1 0 3 900 2100 29 3 0 0
 
 # master
 set gyro_sync_denom = 2
@@ -62,19 +62,37 @@ set vbat_scale = 109
 set yaw_motors_reversed = ON
 set runaway_takeoff_prevention = OFF
 set thrust_linear = 30
-set osd_vbat_pos = 2049
-set osd_rssi_pos = 2299
-set osd_tim_2_pos = 2081
+set osd_vbat_pos = 1
+set osd_rssi_pos = 10458
+set osd_link_quality_pos = 185
+set osd_tim_2_pos = 10241
 set osd_flymode_pos = 2425
-set osd_vtx_channel_pos = 364
+set osd_anti_gravity_pos = 8283
+set osd_g_force_pos = 8249
+set osd_throttle_pos = 8513
+set osd_vtx_channel_pos = 8545
+set osd_crosshairs_pos = 10445
+set osd_ah_sbar_pos = 8398
+set osd_ah_pos = 8270
 set osd_current_pos = 2401
-set osd_craft_name_pos = 488
-set osd_warnings_pos = 2377
+set osd_mah_drawn_pos = 8226
+set osd_craft_name_pos = 8211
+set osd_warnings_pos = 10377
+set osd_avg_cell_voltage_pos = 14337
 set osd_disarmed_pos = 363
-set vtx_power = 2
+set osd_core_temp_pos = 8258
+set osd_stick_overlay_left_pos = 231
+set osd_stick_overlay_right_pos = 239
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_max_g_force = ON
+set osd_stat_min_link_quality = ON
 set vcd_video_system = NTSC
 set gyro_rpm_notch_harmonics = 2
-set name = Social Distancer
+set name = Social_Distancer
 
 profile 0
 
@@ -116,6 +134,25 @@ profile 1
 rateprofile 0
 
 # rateprofile 0
+set roll_rc_rate = 1
+set pitch_rc_rate = 1
+set yaw_rc_rate = 210
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 0
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 10
+
+rateprofile 1
+
+# rateprofile 1
+set yaw_rc_rate = 210
+set yaw_srate = 25
+
+rateprofile 2
+
+# rateprofile 2
 set thr_expo = 10
 set roll_rc_rate = 200
 set pitch_rc_rate = 200
@@ -128,24 +165,6 @@ set pitch_srate = 40
 set yaw_srate = 60
 set tpa_rate = 80
 
-rateprofile 1
-
-# rateprofile 1
-set yaw_rc_rate = 210
-set roll_srate = 80
-set pitch_srate = 80
-set yaw_srate = 25
-
-rateprofile 2
-
-# rateprofile 2
-set roll_rc_rate = 1
-set pitch_rc_rate = 1
-set yaw_rc_rate = 210
-set roll_srate = 0
-set pitch_srate = 0
-set yaw_srate = 10
-
 rateprofile 3
 
 rateprofile 4
@@ -153,7 +172,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
