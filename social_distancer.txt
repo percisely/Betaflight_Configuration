@@ -1,5 +1,5 @@
 # version
-# Betaflight / BEEBRAIN_BL_SBUS_US (BBBL) 4.1.0 Nov 28 2019 / 17:32:57 (b59b7df46) MSP API: 1.42
+# Betaflight / BEEBRAIN_BL_SBUS_US (BBBL) 4.1.0 Dec  9 2019 / 11:33:40 (02f8fb726) MSP API: 1.42
 
 # start the command batch
 batch start
@@ -8,7 +8,7 @@ batch start
 defaults nosave
 
 board_name BEEBRAIN_BL_SBUS_US
-mcu_id 002700293139511735343435
+mcu_id 006a003f3038510b37363431
 signature 
 
 # name: Social_Distancer
