@@ -96,6 +96,10 @@ set name = Social_Distancer
 
 profile 0
 
+# profile 0
+set f_pitch = 65
+set f_roll = 65
+
 profile 1
 
 # profile 1
