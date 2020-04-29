@@ -8,7 +8,7 @@ batch start
 defaults nosave
 
 board_name BEEBRAIN_BL_SBUS_US
-mcu_id 006a003f3038510b37363431
+mcu_id 002700293139511735343435
 signature 
 
 # name: Social_Distancer
