@@ -1,5 +1,5 @@
 # version
-# Betaflight / BEEBRAIN_BL_SBUS_US (BBBL) 4.1.0 Dec  9 2019 / 11:33:40 (02f8fb726) MSP API: 1.42
+# Betaflight / BEEBRAIN_BL_CRSF_US (BBBL) 4.1.0 Dec  9 2019 / 11:30:12 (02f8fb726) MSP API: 1.42
 
 # start the command batch
 batch start
@@ -7,7 +7,7 @@ batch start
 # reset configuration to default settings
 defaults nosave
 
-board_name BEEBRAIN_BL_SBUS_US
+board_name BEEBRAIN_BL_CRSF_US
 mcu_id 002700293139511735343435
 signature 
 
@@ -23,13 +23,13 @@ beacon RX_SET
 map TAER1234
 
 # led
-led 0 7,7:U:CTB:10
-led 1 6,8:D:CT:10
-led 2 8,8:D:CT:10
+led 0 7,7:U:CTB:8
+led 1 6,8:D:CT:1
+led 2 8,8:D:CT:1
 
 # aux
 aux 0 0 0 1850 2025 0 0
-aux 1 1 1 925 1150 0 0
+aux 1 1 1 925 1050 0 0
 aux 2 28 1 1400 2100 0 0
 aux 3 30 1 900 2100 0 0
 aux 4 35 1 1400 1600 0 0
@@ -50,6 +50,7 @@ set dyn_lpf_gyro_max_hz = 250
 set acc_calibration = 38,-6,147
 set min_check = 1003
 set max_check = 2000
+set rssi_channel = 0
 set fpv_mix_degrees = 13
 set airmode_start_throttle_percent = 55
 set min_throttle = 1008
@@ -63,8 +64,8 @@ set yaw_motors_reversed = ON
 set runaway_takeoff_prevention = OFF
 set thrust_linear = 30
 set osd_vbat_pos = 1
-set osd_rssi_pos = 10458
-set osd_link_quality_pos = 185
+set osd_rssi_pos = 8408
+set osd_link_quality_pos = 10425
 set osd_tim_2_pos = 10241
 set osd_flymode_pos = 2425
 set osd_anti_gravity_pos = 8283
@@ -81,8 +82,8 @@ set osd_warnings_pos = 10377
 set osd_avg_cell_voltage_pos = 14337
 set osd_disarmed_pos = 363
 set osd_core_temp_pos = 8258
-set osd_stick_overlay_left_pos = 231
-set osd_stick_overlay_right_pos = 239
+set osd_stick_overlay_left_pos = 8423
+set osd_stick_overlay_right_pos = 8431
 set osd_stat_max_spd = OFF
 set osd_stat_battery = ON
 set osd_stat_min_rssi = OFF
@@ -90,15 +91,12 @@ set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set osd_stat_max_g_force = ON
 set osd_stat_min_link_quality = ON
+set vtx_power = 2
 set vcd_video_system = NTSC
 set gyro_rpm_notch_harmonics = 2
 set name = Social_Distancer
 
 profile 0
-
-# profile 0
-set f_pitch = 65
-set f_roll = 65
 
 profile 1
 
@@ -133,7 +131,7 @@ set d_min_advance = 200
 profile 2
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
@@ -151,13 +149,10 @@ set yaw_srate = 10
 rateprofile 1
 
 # rateprofile 1
-set thr_expo = 10
-set yaw_rc_rate = 140
-set roll_expo = 80
-set pitch_expo = 80
-set yaw_expo = 35
-set yaw_srate = 60
-set tpa_rate = 80
+set yaw_rc_rate = 210
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 25
 
 rateprofile 2
 
@@ -169,8 +164,8 @@ set yaw_rc_rate = 140
 set roll_expo = 80
 set pitch_expo = 80
 set yaw_expo = 35
-set roll_srate = 41
-set pitch_srate = 41
+set roll_srate = 40
+set pitch_srate = 40
 set yaw_srate = 60
 set tpa_rate = 80
 
@@ -181,7 +176,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
