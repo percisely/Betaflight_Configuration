@@ -158,7 +158,7 @@ set d_min_roll = 65
 set d_min_pitch = 71
 set d_min_boost_gain = 0
 set d_min_advance = 200
-set motor_output_limit = 50
+set motor_output_limit = 75
 set auto_profile_cell_count = 2
 
 # restore original profile selection
@@ -207,4 +207,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
+
+# save configuration
+save
