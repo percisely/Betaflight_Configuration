@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.1.4 Feb 17 2020 / 17:07:59 (790cb8652) MSP API: 1.42
+# Betaflight / RADIX (RADIX) 4.2.0 May 13 2020 / 16:25:23 (6e0e153a3) MSP API: 1.43
 
 # start the command batch
 batch start
@@ -37,11 +37,11 @@ serial 3 1024 115200 9600 0 115200
 serial 5 2 115200 57600 0 115200
 
 # aux
-aux 0 0 0 1950 2050 0 0
-aux 1 1 1 925 1050 0 0
-aux 2 35 1 1450 1550 0 0
-aux 3 36 2 925 1050 0 0
-aux 4 40 0 1400 2100 0 0
+aux 0 0 2 1925 2100 0 0
+aux 1 1 1 925 1075 0 0
+aux 2 35 1 1350 1650 0 0
+aux 3 36 3 1925 2100 0 0
+aux 4 40 2 900 2100 0 0
 
 # vtxtable
 vtxtable bands 6
@@ -57,18 +57,15 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 200 500
 
 # master
-set gyro_lowpass2_hz = 500
+set gyro_lowpass2_hz = 375
 set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
-set dyn_lpf_gyro_min_hz = 400
-set dyn_lpf_gyro_max_hz = 1000
-set acc_calibration = 102,-166,-20
-set rc_interp = MANUAL
-set rc_smoothing_input_hz = 50
-set rc_smoothing_derivative_hz = 100
-set rc_smoothing_input_type = PT1
-set rc_smoothing_derivative_type = PT1
-set dshot_idle_value = 600
+set dyn_notch_min_hz = 70
+set dyn_notch_max_hz = 350
+set dyn_lpf_gyro_min_hz = 300
+set dyn_lpf_gyro_max_hz = 750
+set acc_calibration = 387,-204,-29,1
+set rc_smoothing_auto_smoothness = 40
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set bat_capacity = 1300
@@ -111,6 +108,7 @@ set vtx_freq = 5917
 set vcd_video_system = NTSC
 set displayport_max7456_blk = 1
 set pinio_box = 40,41,42,43
+set gyro_rpm_notch_q = 900
 set brainfpv_osd_white_level = 100
 set brainfpv_osd_black_level = 40
 set brainfpv_osd_x_scale = 6
@@ -123,58 +121,61 @@ set name = PurpSkoll
 profile 0
 
 # profile 0
-set dyn_lpf_dterm_min_hz = 140
-set dyn_lpf_dterm_max_hz = 340
-set dterm_lowpass2_hz = 300
-set anti_gravity_gain = 5500
-set feedforward_transition = 40
-set p_pitch = 70
-set i_pitch = 126
-set d_pitch = 59
-set f_pitch = 94
-set p_roll = 66
-set i_roll = 119
-set d_roll = 55
-set f_roll = 88
-set p_yaw = 46
-set i_yaw = 126
-set f_yaw = 113
-set d_min_roll = 31
-set d_min_pitch = 34
-set d_min_boost_gain = 33
-set d_min_advance = 27
+set dyn_lpf_dterm_min_hz = 105
+set dyn_lpf_dterm_max_hz = 255
+set dyn_lpf_dterm_curve_expo = 8
+set dterm_lowpass2_hz = 225
+set feedforward_transition = 70
+set iterm_relax_cutoff = 5
+set iterm_windup = 75
+set yaw_lowpass_hz = 50
+set throttle_boost = 2
+set throttle_boost_cutoff = 10
+set d_pitch = 32
+set d_roll = 30
+set d_min_roll = 0
+set d_min_pitch = 0
 set auto_profile_cell_count = 4
+set ff_interpolate_sp = AVERAGED_4
+set ff_spike_limit = 50
+set ff_smooth_factor = 50
+set ff_boost = 0
 
 profile 1
 
 # profile 1
-set dyn_lpf_dterm_min_hz = 140
-set dyn_lpf_dterm_max_hz = 340
-set dterm_lowpass2_hz = 300
-set anti_gravity_gain = 5500
-set feedforward_transition = 40
-set p_pitch = 65
-set i_pitch = 99
-set d_pitch = 42
-set f_pitch = 74
-set p_roll = 61
-set i_roll = 94
-set d_roll = 39
-set f_roll = 69
-set p_yaw = 33
-set i_yaw = 99
-set f_yaw = 89
-set d_min_roll = 22
-set d_min_pitch = 24
-set d_min_boost_gain = 33
-set d_min_advance = 27
+set dyn_lpf_dterm_min_hz = 105
+set dyn_lpf_dterm_max_hz = 255
+set dyn_lpf_dterm_curve_expo = 8
+set dterm_lowpass2_hz = 225
+set feedforward_transition = 70
+set iterm_relax_cutoff = 5
+set iterm_windup = 75
+set yaw_lowpass_hz = 50
+set throttle_boost = 2
+set throttle_boost_cutoff = 10
+set d_pitch = 53
+set d_roll = 49
+set d_min_roll = 32
+set d_min_pitch = 35
 set motor_output_limit = 80
 set auto_profile_cell_count = 5
+set ff_interpolate_sp = AVERAGED_4
+set ff_spike_limit = 50
+set ff_smooth_factor = 50
+set ff_boost = 0
 
 profile 2
 
+# profile 2
+set dyn_lpf_dterm_min_hz = 105
+set dyn_lpf_dterm_max_hz = 255
+set dterm_lowpass2_hz = 225
+set motor_output_limit = 66
+set auto_profile_cell_count = 6
+
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
