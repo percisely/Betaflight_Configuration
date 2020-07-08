@@ -13,14 +13,36 @@ signature
 
 # name: grApex
 
+# resources
+resource MOTOR 1 A10
+resource MOTOR 2 A02
+resource MOTOR 3 A15
+resource MOTOR 4 A03
+
 # feature
 feature TELEMETRY
+feature LED_STRIP
 
 # beacon
 beacon RX_SET
 
 # map
 map TAER1234
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 2 0 115200 57600 0 115200
+
+# led
+led 0 3,4:SD:CO:2
+led 1 3,6::CO:2
+led 2 4,6::CO:3
+led 3 5,6::CO:4
+led 4 6,6::CO:5
+led 5 7,6::CO:7
+led 6 8,6::CO:9
+led 7 9,6::CO:11
+led 8 10,6::CO:13
 
 # aux
 aux 0 0 2 1900 2100 0 0
@@ -30,8 +52,19 @@ aux 3 35 1 1450 1550 0 0
 aux 4 36 3 1925 2100 0 0
 
 # master
-set acc_calibration = 128,-69,-21,1
+set gyro_lowpass2_hz = 500
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set dyn_notch_min_hz = 70
+set dyn_notch_max_hz = 350
+set dyn_lpf_gyro_min_hz = 400
+set dyn_lpf_gyro_max_hz = 1000
+set acc_calibration = 343,-77,-67,1
+set min_throttle = 1070
+set dshot_bidir = ON
+set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
+set motor_pwm_rate = 480
 set bat_capacity = 1100
 set vbat_max_cell_voltage = 440
 set ibata_scale = 117
@@ -48,7 +81,7 @@ set osd_rssi_pos = 2265
 set osd_tim_1_pos = 2080
 set osd_tim_2_pos = 33
 set osd_flymode_pos = 65
-set osd_throttle_pos = 233
+set osd_throttle_pos = 2281
 set osd_mah_drawn_pos = 192
 set osd_craft_name_pos = 362
 set osd_gps_speed_pos = 22
@@ -64,6 +97,7 @@ set osd_avg_cell_voltage_pos = 2242
 set osd_esc_tmp_pos = 2427
 set osd_stat_max_dist = ON
 set osd_stat_max_alt = ON
+set gyro_rpm_notch_q = 900
 set brainfpv_osd_white_level = 100
 set brainfpv_osd_black_level = 40
 set brainfpv_osd_x_scale = 6
@@ -73,6 +107,27 @@ set brainfpv_speed_scale = 0
 set name = grApex
 
 profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dterm_lowpass2_hz = 300
+set anti_gravity_gain = 5000
+set feedforward_transition = 40
+set p_pitch = 51
+set i_pitch = 99
+set d_pitch = 46
+set f_pitch = 74
+set p_roll = 46
+set i_roll = 94
+set d_roll = 43
+set f_roll = 69
+set p_yaw = 50
+set i_yaw = 99
+set f_yaw = 69
+set d_min_roll = 0
+set d_min_pitch = 0
+set ff_interpolate_sp = AVERAGED_3
 
 profile 1
 
