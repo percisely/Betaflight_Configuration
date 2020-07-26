@@ -8,7 +8,7 @@ batch start
 defaults nosave
 
 board_name RADIX
-mcu_id 004900393438510d31343938
+mcu_id 005000283038511130333332
 signature 
 
 # name: grApex
@@ -59,12 +59,9 @@ set dyn_notch_min_hz = 70
 set dyn_notch_max_hz = 350
 set dyn_lpf_gyro_min_hz = 400
 set dyn_lpf_gyro_max_hz = 1000
-set acc_calibration = 343,-77,-67,1
-set min_throttle = 1070
+set acc_calibration = 90,-74,-45,1
 set dshot_bidir = ON
-set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
-set motor_pwm_rate = 480
 set bat_capacity = 1100
 set vbat_max_cell_voltage = 440
 set ibata_scale = 117
