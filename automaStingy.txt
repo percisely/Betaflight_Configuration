@@ -37,9 +37,13 @@ feature PWM_OUTPUT_ENABLE
 # beeper
 
 # map
+map TAER
 
 # serial
+serial 0 256 115200 115200 0 115200
+serial 2 1 115200 115200 0 115200
 serial 3 2 115200 38400 0 115200
+serial 4 2048 115200 115200 0 115200
 
 # led
 led 0 5,10:U:CO:8
@@ -47,14 +51,18 @@ led 1 5,13:U:CO:9
 led 2 8,13:U:CO:11
 led 3 8,10:U:CO:10
 led 4 12,3:D:G:0
-led 5 11,4:D:G:0
-led 6 13,4:D:G:0
+led 5 11,4:D:CN:1
+led 6 13,4:D:CN:2
 
 # color
 
 # mode_color
 
 # aux
+aux 0 0 2 1950 2075
+aux 1 1 1 925 1550
+aux 2 47 4 900 1125
+aux 3 48 4 1925 2100
 
 # adjrange
 
@@ -66,6 +74,14 @@ led 6 13,4:D:G:0
 #wp 0 invalid
 
 # osd_layout
+osd_layout 0 1 1 0 V
+osd_layout 0 7 24 3 V
+osd_layout 0 9 1 2 H
+osd_layout 0 13 23 1 V
+osd_layout 0 15 1 1 V
+osd_layout 0 23 23 2 V
+osd_layout 0 30 1 11 V
+osd_layout 0 43 0 0 V
 
 # master
 set looptime = 500
@@ -76,12 +92,22 @@ set dynamic_gyro_notch_enabled = ON
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 120
 set acc_hardware = MPU6000
+set acczero_x = 70
+set acczero_y = -23
+set acczero_z = -232
+set accgain_x = 4069
+set accgain_y = 4058
+set accgain_z = 4037
+set rangefinder_hardware = MSP
+set opflow_hardware = MSP
+set opflow_scale =  8.574
 set mag_hardware = HMC5883
-set magzero_x = -1268
-set magzero_y = -1221
-set magzero_z = -1430
+set magzero_x = 8
+set magzero_y = -55
+set magzero_z = 16
 set baro_hardware = BMP280
 set pitot_hardware = ADC
+set serialrx_provider = CRSF
 set motor_pwm_rate = 8000
 set motor_pwm_protocol = DSHOT300
 set failsafe_procedure = DROP
@@ -89,8 +115,13 @@ set align_board_roll = 1800
 set model_preview_type = 3
 set applied_defaults = 2
 set mc_airmode_type = THROTTLE_THRESHOLD
+set nav_rth_altitude = 2000
 set i2c_speed = 800KHZ
+set debug_mode = FLOW_RAW
 set name = Automa Stingy
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 2
 
 # profile
 profile 1
