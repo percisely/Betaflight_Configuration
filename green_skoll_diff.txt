@@ -55,6 +55,13 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 200 500
 
 # master
+set gyro_lowpass2_hz = 500
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set dyn_notch_min_hz = 70
+set dyn_notch_max_hz = 350
+set dyn_lpf_gyro_min_hz = 400
+set dyn_lpf_gyro_max_hz = 1000
 set acc_calibration = 224,-35,-73,1
 set dshot_idle_value = 600
 set dshot_bidir = ON
@@ -100,12 +107,48 @@ set name = GreenSkll
 
 profile 0
 
+# profile 0
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dterm_lowpass2_hz = 300
+set anti_gravity_gain = 5000
+set feedforward_transition = 40
+set d_pitch = 32
+set f_pitch = 67
+set d_roll = 30
+set f_roll = 63
+set f_yaw = 63
+set d_min_roll = 0
+set d_min_pitch = 0
+set ff_interpolate_sp = AVERAGED_3
+
 profile 1
+
+# profile 1
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
+set dterm_lowpass2_hz = 300
+set anti_gravity_gain = 5000
+set feedforward_transition = 40
+set p_pitch = 51
+set i_pitch = 99
+set d_pitch = 46
+set f_pitch = 74
+set p_roll = 46
+set i_roll = 94
+set d_roll = 43
+set f_roll = 69
+set p_yaw = 50
+set i_yaw = 99
+set f_yaw = 69
+set d_min_roll = 0
+set d_min_pitch = 0
+set ff_interpolate_sp = AVERAGED_3
 
 profile 2
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
