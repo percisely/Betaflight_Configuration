@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.1.1 Nov 26 2019 / 15:38:18 (5dca71fa5) MSP API: 1.42
+# Betaflight / RADIX (RADIX) 4.2.0 Jun 17 2020 / 13:04:07 (4064a2fb5) MSP API: 1.43
 
 # start the command batch
 batch start
@@ -55,23 +55,11 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 200 500
 
 # master
-set gyro_lowpass2_hz = 500
-set dyn_notch_width_percent = 0
-set dyn_notch_q = 250
-set dyn_lpf_gyro_min_hz = 400
-set dyn_lpf_gyro_max_hz = 1000
-set acc_trim_roll = -2
-set acc_calibration = 188,-75,-162
-set rc_interp = MANUAL
-set rc_smoothing_input_hz = 50
-set rc_smoothing_derivative_hz = 100
-set rc_smoothing_input_type = PT1
-set rc_smoothing_derivative_type = PT1
+set acc_calibration = 224,-35,-73,1
 set dshot_idle_value = 600
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
-set bat_capacity = 1300
-set vbat_max_cell_voltage = 440
+set bat_capacity = 1000
 set battery_meter = ESC
 set ibata_scale = 155
 set beeper_dshot_beacon_tone = 3
@@ -108,96 +96,23 @@ set vtx_channel = 8
 set vtx_power = 2
 set vtx_freq = 5917
 set vcd_video_system = NTSC
-set displayport_max7456_blk = 1
-set brainfpv_osd_white_level = 100
-set brainfpv_osd_black_level = 40
-set brainfpv_osd_x_scale = 6
-set brainfpv_osd_font = 1
-set brainfpv_altitude_scale = 0
-set brainfpv_speed_scale = 0
 set name = GreenSkll
 
 profile 0
 
-# profile 0
-set dyn_lpf_dterm_min_hz = 140
-set dyn_lpf_dterm_max_hz = 340
-set dterm_lowpass2_hz = 300
-set anti_gravity_gain = 6600
-set feedforward_transition = 40
-set p_pitch = 60
-set i_pitch = 108
-set d_pitch = 50
-set f_pitch = 114
-set p_roll = 56
-set i_roll = 102
-set d_roll = 47
-set f_roll = 108
-set p_yaw = 40
-set i_yaw = 108
-set f_yaw = 108
-set d_min_roll = 26
-set d_min_pitch = 29
-set d_min_boost_gain = 30
-set d_min_advance = 70
-set auto_profile_cell_count = 4
-
 profile 1
 
-# profile 1
-set dyn_lpf_dterm_min_hz = 140
-set dyn_lpf_dterm_max_hz = 340
-set dterm_lowpass2_hz = 300
-set anti_gravity_gain = 6000
-set feedforward_transition = 40
-set p_pitch = 54
-set i_pitch = 108
-set d_pitch = 50
-set f_pitch = 68
-set p_roll = 50
-set i_roll = 102
-set d_roll = 47
-set f_roll = 65
-set p_yaw = 40
-set i_yaw = 108
-set f_yaw = 94
-set d_min_roll = 26
-set d_min_pitch = 29
-set d_min_boost_gain = 30
-set d_min_advance = 60
-set auto_profile_cell_count = 5
-
 profile 2
-
-# profile 2
-set dyn_lpf_dterm_min_hz = 140
-set dyn_lpf_dterm_max_hz = 340
-set dterm_lowpass2_hz = 300
-set anti_gravity_gain = 5500
-set feedforward_transition = 40
-set p_pitch = 59
-set d_pitch = 49
-set f_pitch = 57
-set p_roll = 55
-set d_roll = 46
-set f_roll = 54
-set p_yaw = 39
-set f_yaw = 78
-set d_min_roll = 26
-set d_min_pitch = 29
-set d_min_boost_gain = 32
-set d_min_advance = 27
-set auto_profile_cell_count = 6
 
 # restore original profile selection
-profile 2
+profile 0
 
 rateprofile 0
 
 # rateprofile 0
 set thr_expo = 10
 set roll_rc_rate = 200
-set pitch_rc_rate = 200
+set pitch_rc_rate = 180
 set yaw_rc_rate = 150
 set roll_expo = 80
 set pitch_expo = 80
