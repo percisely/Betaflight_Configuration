@@ -14,10 +14,10 @@ signature
 # name: Le_Pex
 
 # resources
-resource MOTOR 1 C08
-resource MOTOR 2 A15
-resource MOTOR 3 A02
-resource MOTOR 4 A10
+resource MOTOR 1 A10
+resource MOTOR 2 A02
+resource MOTOR 3 A15
+resource MOTOR 4 A03
 resource MOTOR 5 NONE
 
 # feature
@@ -55,16 +55,19 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 200 500
 
 # master
-set gyro_lowpass2_hz = 425
+set gyro_lowpass2_hz = 325
 set dyn_notch_width_percent = 0
 set dyn_notch_q = 1000
 set dyn_notch_min_hz = 90
 set dyn_notch_max_hz = 350
-set dyn_lpf_gyro_min_hz = 340
-set dyn_lpf_gyro_max_hz = 850
+set dyn_lpf_gyro_min_hz = 260
+set dyn_lpf_gyro_max_hz = 650
 set acc_calibration = 323,-208,-152,1
+set min_throttle = 1070
 set dshot_bidir = ON
+set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
+set motor_pwm_rate = 480
 set bat_capacity = 1100
 set vbat_max_cell_voltage = 440
 set ibata_scale = 117
@@ -104,6 +107,10 @@ set osd_stat_max_alt = ON
 set osd_stat_bbox = OFF
 set osd_stat_max_g_force = ON
 set osd_stat_min_link_quality = ON
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 2
+set vtx_freq = 5917
 set vcd_video_system = NTSC
 set gyro_rpm_notch_q = 900
 set brainfpv_osd_white_level = 100
@@ -140,21 +147,22 @@ set ff_interpolate_sp = AVERAGED_3
 profile 1
 
 # profile 1
-set dyn_lpf_dterm_min_hz = 112
-set dyn_lpf_dterm_max_hz = 272
-set dterm_lowpass2_hz = 240
+set dyn_lpf_dterm_min_hz = 91
+set dyn_lpf_dterm_max_hz = 221
+set dterm_lowpass2_hz = 195
 set anti_gravity_gain = 5000
 set feedforward_transition = 40
 set p_pitch = 51
 set i_pitch = 99
 set d_pitch = 46
+set f_pitch = 70
 set p_roll = 46
 set i_roll = 94
 set d_roll = 43
-set f_roll = 89
+set f_roll = 70
 set p_yaw = 50
 set i_yaw = 99
-set f_yaw = 89
+set f_yaw = 80
 set d_min_roll = 0
 set d_min_pitch = 0
 set ff_interpolate_sp = AVERAGED_3
