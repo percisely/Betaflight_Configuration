@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.2.0 Jun 17 2020 / 13:04:07 (4064a2fb5) MSP API: 1.43
+# Betaflight / RADIX (RADIX) 4.2.4 Oct 30 2020 / 15:33:32 (8cf4648da) MSP API: 1.43
 
 # start the command batch
 batch start
@@ -8,7 +8,7 @@ batch start
 defaults nosave
 
 board_name RADIX
-mcu_id 004900393438510d31343938
+mcu_id 0035001e3138510430343432
 signature 
 
 # name: grApex
@@ -59,7 +59,7 @@ set dyn_notch_min_hz = 90
 set dyn_notch_max_hz = 350
 set dyn_lpf_gyro_min_hz = 240
 set dyn_lpf_gyro_max_hz = 600
-set acc_calibration = 94,-41,-73,1
+set acc_calibration = 85,-238,-16,1
 set dshot_bidir = ON
 set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
@@ -69,6 +69,7 @@ set ibata_scale = 117
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
+set report_cell_voltage = ON
 set osd_units = IMPERIAL
 set osd_warn_core_temp = OFF
 set osd_cap_alarm = 500
