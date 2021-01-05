@@ -74,6 +74,7 @@ set ibata_scale = 117
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
+set thrust_linear = 20
 set report_cell_voltage = ON
 set osd_units = IMPERIAL
 set osd_warn_core_temp = OFF
@@ -175,17 +176,18 @@ set dyn_lpf_dterm_max_hz = 272
 set dterm_lowpass2_hz = 240
 set p_pitch = 55
 set i_pitch = 108
-set d_pitch = 43
+set d_pitch = 47
 set f_pitch = 80
 set p_roll = 50
 set i_roll = 102
-set d_roll = 40
+set d_roll = 43
 set f_roll = 76
 set p_yaw = 54
 set i_yaw = 108
 set f_yaw = 76
 set d_min_roll = 0
 set d_min_pitch = 0
+set ff_interpolate_sp = AVERAGED_3
 
 # restore original profile selection
 profile 2
@@ -229,7 +231,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # save configuration
 save
