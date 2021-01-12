@@ -1,6 +1,5 @@
 # version
-# INAV/MATEKF722PX 2.5.2 Aug  4 2020 / 10:32:29 (faaedc7cb)
-# GCC-9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
+# INAV/MATEKF722PX 2.6.0 Dec  4 2020 / 12nch revision 277599]
 
 # start the command batch
 batch start
@@ -23,126 +22,73 @@ mmix 3  1.000  1.000 -1.000 -1.000
 
 # servo
 
+# safehome
+
 # logic
 
-# gvar
-
-# gf
-
-# feature
-feature GPS
-feature LED_STRIP
-feature PWM_OUTPUT_ENABLE
-
-# beeper
-
-# map
-map TAER
-
-# serial
-serial 0 256 115200 115200 0 115200
+# 0 256 115200 115200 0 115200
 serial 2 1 115200 115200 0 115200
 serial 3 2 115200 38400 0 115200
 serial 4 2048 115200 115200 0 115200
 
 # led
-led 0 5,10:U:CO:8
-led 1 5,13:U:CO:9
-led 2 8,13:U:CO:11
-led 3 8,10:U:CO:10
-led 4 12,3:D:G:0
-led 5 11,4:D:CN:1
+led 0 5,10:U:CO 11,4:D:CN:1
 led 6 13,4:D:CN:2
 
 # color
 
 # mode_color
 
-# aux
-aux 0 0 2 1950 2075
-aux 1 1 1 925 1550
-aux 2 47 4 900 1125
-aux 3 48 4 1925 2100
-
-# adjrange
-
-# rxrange
-
-# temp_sensor
-
-# wp
-#wp 0 invalid
-
-# osd_layout
-osd_layout 0 1 1 0 V
-osd_layout 0 7 24 3 V
+# 75
+aux 3 11 1 900 1075
+aux 4 47 4 900 1125
+aux 5 48 4 1925 2100
 osd_layout 0 9 1 2 H
 osd_layout 0 13 23 1 V
 osd_layout 0 15 1 1 V
 osd_layout 0 23 23 2 V
 osd_layout 0 30 1 11 V
-osd_layout 0 43 0 0 V
-
-# master
-set looptime = 500
+osd_layouset looptime = 500
 set gyro_hardware_lpf = 256HZ
 set gyro_lpf_hz = 110
 set gyro_lpf_type = PT1
-set dynamic_gyro_notch_enabled = ON
-set dynamic_gyro_notch_q = 250
-set dynamic_gyro_notch_min_hz = 120
+set gyro_stage2_lowpass_hz = 250
+set dynamic_gyro_notch_q = 200
 set acc_hardware = MPU6000
-set acczero_x = 70
-set acczero_y = -23
 set acczero_z = -232
 set accgain_x = 4069
 set accgain_y = 4058
 set accgain_z = 4037
 set rangefinder_hardware = MSP
 set opflow_hardware = MSP
-set opflow_scale =  8.574
-set mag_hardware = HMC5883
-set magzero_x = 8
-set magzero_y = -55
-set magzero_z = 16
+set opflow_scale =set magzero_x = -18
+set magzero_y = 48
+set magzero_z = -91
+set maggain_x = 882
+set maggain_y = 795
+set maggain_z = 1131
 set baro_hardware = BMP280
-set pitot_hardware = ADC
 set serialrx_provider = CRSF
-set motor_pwm_rate = 8000
-set motor_pwm_protocol = DSHOT300
 set failsafe_procedure = DROP
 set align_board_roll = 1800
 set model_preview_type = 3
 set applied_defaults = 2
 set mc_airmode_type = THROTTLE_THRESHOLD
+set nav_use_midthr_for_althold = ON
+set nav_auto_speed = 500
+set nav_auto_climb_rate = 300
+set nav_manual_climb_rate = 100
 set nav_rth_altitude = 2000
-set i2c_speed = 800KHZ
 set debug_mode = FLOW_RAW
 set name = Automa Stingy
 set vtx_band = 5
-set vtx_channel = 8
-set vtx_power = 2
-
-# profile
-profile 1
-
-set mc_p_pitch = 44
-set mc_i_pitch = 75
-set mc_d_pitch = 25
-set mc_i_roll = 60
-set mc_p_yaw = 35
-set mc_i_yaw = 80
-set dterm_lpf_hz = 110
+set vtx_chanset dterm_lpf_hz = 100
 set dterm_lpf_type = PT1
 set dterm_lpf2_hz = 170
-set dterm_lpf2_type = PT1
-set use_dterm_fir_filter = OFF
-set dterm_setpoint_weight =  0.750
 set d_boost_factor =  1.500
-set antigravity_gain =  2.000
 set antigravity_accelerator =  5.000
-set tpa_rate = 20
-set tpa_breakpoint = 1200
+set setpoint_kalman_enabled = ON
+set setpoint_kalman_q = 200
 set rc_yaw_expo = 70
 set roll_rate = 70
 set pitch_rate = 70
@@ -152,25 +98,10 @@ set yaw_rate = 60
 profile 2
 
 
-# profile
-profile 3
-
-
-# battery_profile
-battery_profile 1
-
-
-# battery_profile
-battery_profile 2
-
-
 # battery_profile
 battery_profile 3
 
 
-# restore original profile selection
-profile 1
-battery_profile 1
 
 # save configuration
 save
