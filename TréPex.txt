@@ -29,22 +29,22 @@ beacon RX_SET
 map TAER1234
 
 # led
-led 0 13,5:S:CO:2
-led 1 13,6:S:CO:2
-led 2 12,5:S:CO:2
-led 3 12,6:S:CO:2
-led 4 11,5:S:CO:2
-led 5 11,6:S:CO:2
-led 6 10,5:S:CO:2
-led 7 10,6:S:CO:2
-led 8 9,5:S:CO:2
-led 9 9,6:S:CO:2
-led 10 8,5:S:CO:2
-led 11 8,6:S:CO:2
-led 12 7,5:S:CO:2
-led 13 7,6:S:CO:2
-led 14 6,5:S:CO:2
-led 15 6,6:S:CO:2
+led 0 6,5:S:CO:13
+led 1 6,6::CO:13
+led 2 7,6::CO:11
+led 3 7,5:S:CO:11
+led 4 8,5:S:CO:10
+led 5 8,6::CO:10
+led 6 9,6::CO:7
+led 7 9,5:S:CO:7
+led 8 10,5:S:CO:4
+led 9 10,6::CO:4
+led 10 11,6::CO:3
+led 11 11,5:S:CO:3
+led 12 12,5:S:CO:2
+led 13 12,6::CO:2
+led 14 13,6::CO:2
+led 15 13,5:S:CO:2
 
 # aux
 aux 0 0 2 1900 2100 0 0
@@ -54,7 +54,11 @@ aux 3 35 1 1450 1550 0 0
 aux 4 36 3 1925 2100 0 0
 
 # master
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
 set acc_calibration = 11,1,55,1
+set rc_smoothing_derivative_type = PT1
+set rc_smoothing_auto_smoothness = 40
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
 set bat_capacity = 1100
@@ -104,6 +108,21 @@ set brainfpv_speed_scale = 0
 set name = TréPex
 
 profile 0
+
+# profile 0
+set dyn_lpf_dterm_curve_expo = 8
+set dterm_lowpass_hz = 100
+set vbat_sag_compensation = 100
+set feedforward_transition = 70
+set iterm_relax_cutoff = 5
+set iterm_windup = 75
+set yaw_lowpass_hz = 50
+set throttle_boost = 2
+set throttle_boost_cutoff = 10
+set ff_interpolate_sp = AVERAGED_4
+set ff_spike_limit = 50
+set ff_smooth_factor = 50
+set ff_boost = 0
 
 profile 1
 
