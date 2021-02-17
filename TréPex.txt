@@ -54,11 +54,11 @@ aux 3 35 1 1450 1550 0 0
 aux 4 36 3 1925 2100 0 0
 
 # master
-set gyro_lowpass2_hz = 325
+set gyro_lowpass2_hz = 500
 set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
-set dyn_lpf_gyro_min_hz = 260
-set dyn_lpf_gyro_max_hz = 650
+set dyn_lpf_gyro_min_hz = 400
+set dyn_lpf_gyro_max_hz = 1000
 set acc_calibration = 11,1,55,1
 set rc_smoothing_derivative_type = PT1
 set rc_smoothing_auto_smoothness = 40
@@ -113,11 +113,11 @@ set name = TréPex
 profile 0
 
 # profile 0
-set dyn_lpf_dterm_min_hz = 91
-set dyn_lpf_dterm_max_hz = 221
+set dyn_lpf_dterm_min_hz = 140
+set dyn_lpf_dterm_max_hz = 340
 set dyn_lpf_dterm_curve_expo = 8
 set dterm_lowpass_hz = 100
-set dterm_lowpass2_hz = 195
+set dterm_lowpass2_hz = 300
 set vbat_sag_compensation = 100
 set feedforward_transition = 70
 set iterm_relax_cutoff = 5
@@ -125,8 +125,17 @@ set iterm_windup = 75
 set yaw_lowpass_hz = 50
 set throttle_boost = 2
 set throttle_boost_cutoff = 10
-set d_pitch = 32
-set d_roll = 30
+set p_pitch = 51
+set i_pitch = 99
+set d_pitch = 40
+set f_pitch = 63
+set p_roll = 46
+set i_roll = 94
+set d_roll = 36
+set f_roll = 59
+set p_yaw = 50
+set i_yaw = 99
+set f_yaw = 59
 set d_min_roll = 0
 set d_min_pitch = 0
 set ff_interpolate_sp = AVERAGED_4
