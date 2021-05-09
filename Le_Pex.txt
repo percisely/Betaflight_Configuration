@@ -67,13 +67,13 @@ set min_throttle = 1070
 set dshot_bidir = ON
 set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
-set motor_pwm_rate = 480
 set bat_capacity = 1100
 set vbat_max_cell_voltage = 440
 set ibata_scale = 117
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
+set thrust_linear = 20
 set report_cell_voltage = ON
 set osd_units = IMPERIAL
 set osd_warn_core_temp = OFF
@@ -92,7 +92,7 @@ set osd_craft_name_pos = 362
 set osd_gps_speed_pos = 22
 set osd_gps_lon_pos = 369
 set osd_gps_lat_pos = 354
-set osd_gps_sats_pos = 384
+set osd_gps_sats_pos = 2432
 set osd_home_dir_pos = 2094
 set osd_home_dist_pos = 2061
 set osd_altitude_pos = 2455
@@ -172,13 +172,15 @@ profile 2
 set dyn_lpf_dterm_min_hz = 112
 set dyn_lpf_dterm_max_hz = 272
 set dterm_lowpass2_hz = 240
-set p_pitch = 49
+set p_pitch = 55
 set i_pitch = 108
+set d_pitch = 47
 set f_pitch = 80
-set p_roll = 46
+set p_roll = 50
 set i_roll = 102
+set d_roll = 43
 set f_roll = 76
-set p_yaw = 49
+set p_yaw = 54
 set i_yaw = 108
 set f_yaw = 76
 set d_min_roll = 0
@@ -186,7 +188,7 @@ set d_min_pitch = 0
 set ff_interpolate_sp = AVERAGED_3
 
 # restore original profile selection
-profile 0
+profile 2
 
 rateprofile 0
 
@@ -227,7 +229,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
