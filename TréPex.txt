@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX2 (RDX2) 4.2.5 Dec 15 2020 / 15:45:21 (f1b4580d5) MSP API: 1.43
+# Betaflight / RADIX2 (RDX2) 4.2.6 Feb  8 2021 / 14:37:32 (fc5b1556f) MSP API: 1.43
 
 # start the command batch
 batch start
@@ -8,10 +8,10 @@ batch start
 defaults nosave
 
 board_name RADIX2
-mcu_id 0019002d3339510938303739
+mcu_id 003400393230510232313430
 signature 
 
-# name: TréPex
+# name: TrePex
 
 # resources
 resource MOTOR 1 D12
@@ -108,7 +108,7 @@ set brainfpv_osd_x_scale = 6
 set brainfpv_osd_font = 1
 set brainfpv_altitude_scale = 0
 set brainfpv_speed_scale = 0
-set name = TréPex
+set name = TrePex
 
 profile 0
 
