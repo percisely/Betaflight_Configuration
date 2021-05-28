@@ -20,6 +20,7 @@ resource MOTOR 3 D13
 resource MOTOR 4 B05
 
 # feature
+feature TELEMETRY
 feature LED_STRIP
 
 # beacon
