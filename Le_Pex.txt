@@ -107,6 +107,7 @@ set osd_stat_max_alt = ON
 set osd_stat_bbox = OFF
 set osd_stat_max_g_force = ON
 set osd_stat_min_link_quality = ON
+set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 8
 set vtx_power = 3
