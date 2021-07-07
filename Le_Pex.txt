@@ -55,13 +55,13 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 200 500
 
 # master
-set gyro_lowpass2_hz = 400
+set gyro_lowpass_hz = 0
+set gyro_lowpass2_hz = 0
 set dyn_notch_width_percent = 0
-set dyn_notch_q = 1000
-set dyn_notch_min_hz = 90
-set dyn_notch_max_hz = 350
-set dyn_lpf_gyro_min_hz = 320
-set dyn_lpf_gyro_max_hz = 800
+set dyn_notch_q = 250
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 400
+set dyn_lpf_gyro_min_hz = 0
 set acc_calibration = 323,-208,-152,1
 set min_throttle = 1070
 set dshot_bidir = ON
@@ -73,7 +73,6 @@ set ibata_scale = 117
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
-set thrust_linear = 20
 set report_cell_voltage = ON
 set osd_units = IMPERIAL
 set osd_warn_core_temp = OFF
@@ -126,23 +125,10 @@ set name = Le_Pex
 profile 0
 
 # profile 0
-set dyn_lpf_dterm_min_hz = 112
-set dyn_lpf_dterm_max_hz = 272
-set dterm_lowpass2_hz = 240
-set feedforward_transition = 70
-set p_pitch = 51
-set i_pitch = 99
-set d_pitch = 40
-set f_pitch = 74
-set p_roll = 46
-set i_roll = 94
-set d_roll = 36
-set f_roll = 69
-set p_yaw = 50
-set i_yaw = 99
-set f_yaw = 69
-set d_min_roll = 0
-set d_min_pitch = 0
+set dyn_lpf_dterm_min_hz = 0
+set dterm_lowpass_type = BIQUAD
+set dterm_lowpass_hz = 100
+set dterm_lowpass2_hz = 0
 
 profile 1
 
@@ -189,7 +175,7 @@ set d_min_pitch = 0
 set ff_interpolate_sp = AVERAGED_3
 
 # restore original profile selection
-profile 2
+profile 0
 
 rateprofile 0
 
