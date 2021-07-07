@@ -62,7 +62,7 @@ set dyn_notch_q = 250
 set dyn_notch_min_hz = 100
 set dyn_notch_max_hz = 400
 set dyn_lpf_gyro_min_hz = 0
-set acc_calibration = 323,-208,-152,1
+set acc_calibration = -24,3,-21,1
 set min_throttle = 1070
 set dshot_bidir = ON
 set use_unsynced_pwm = OFF
@@ -129,6 +129,21 @@ set dyn_lpf_dterm_min_hz = 0
 set dterm_lowpass_type = BIQUAD
 set dterm_lowpass_hz = 100
 set dterm_lowpass2_hz = 0
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set p_pitch = 60
+set i_pitch = 117
+set d_pitch = 42
+set f_pitch = 124
+set p_roll = 55
+set i_roll = 111
+set d_roll = 39
+set f_roll = 117
+set p_yaw = 59
+set i_yaw = 117
+set f_yaw = 117
+set d_min_roll = 0
+set d_min_pitch = 0
 
 profile 1
 
