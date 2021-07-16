@@ -1,5 +1,6 @@
 # version
-# Betaflight / RADIX2 (RDX2) 4.2.6 Feb  8 2021 / 14:37:32 (fc5b1556f) MSP API: 1.43
+# Betaflight / STM32F7X2 (S7X2) 4.2.9 Apr 27 2021 / 19:34:29 (e097f4ab7) MSP API: 1.43
+# config: manufacturer_id: MTKS, board_name: MATEKF722HD, version: a684eb8f, date: 2020-05-26T06:40:03Z
 
 # start the command batch
 batch start
@@ -7,20 +8,21 @@ batch start
 # reset configuration to default settings
 defaults nosave
 
-board_name RADIX2
-mcu_id 003400393230510232313430
+board_name MATEKF722HD
+manufacturer_id MTKS
+mcu_id 003a00213338510439393832
 signature 
 
 # name: TrePex
 
 # resources
-resource MOTOR 1 D12
-resource MOTOR 2 A00
-resource MOTOR 3 D13
-resource MOTOR 4 B05
+resource MOTOR 1 B04
+resource MOTOR 2 C08
+resource MOTOR 3 B00
+resource MOTOR 4 C09
+resource MOTOR 5 NONE
 
 # feature
-feature TELEMETRY
 feature LED_STRIP
 
 # beacon
@@ -28,6 +30,10 @@ beacon RX_SET
 
 # map
 map TAER1234
+
+# serial
+serial 1 0 115200 57600 0 115200
+serial 3 64 115200 57600 0 115200
 
 # led
 led 0 6,5:S:CO:13
@@ -60,16 +66,20 @@ set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
 set dyn_lpf_gyro_min_hz = 400
 set dyn_lpf_gyro_max_hz = 1000
-set acc_calibration = 11,1,55,1
+set acc_calibration = 34,133,-187,1
+set mag_hardware = NONE
 set rc_smoothing_derivative_type = PT1
 set rc_smoothing_auto_smoothness = 40
+set serialrx_provider = CRSF
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
+set align_board_roll = 180
 set bat_capacity = 1100
 set vbat_max_cell_voltage = 440
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
+set pid_process_denom = 2
 set thrust_linear = 20
 set report_cell_voltage = ON
 set osd_units = IMPERIAL
@@ -105,10 +115,6 @@ set osd_stat_bbox = OFF
 set osd_stat_max_g_force = ON
 set osd_stat_min_link_quality = ON
 set gyro_rpm_notch_q = 900
-set brainfpv_osd_x_scale = 6
-set brainfpv_osd_font = 1
-set brainfpv_altitude_scale = 0
-set brainfpv_speed_scale = 0
 set name = TrePex
 
 profile 0
