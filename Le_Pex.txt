@@ -246,5 +246,3 @@ rateprofile 0
 
 # save configuration
 save
-Write your command here. Press Tab for AutoComplete.
-Save to FileLoad from fileClear output historyCopy to clipboard
