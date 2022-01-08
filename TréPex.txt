@@ -11,7 +11,7 @@ board_name RADIX2
 mcu_id 0019002d3339510938303739
 signature 
 
-# name: TrPex
+# name: TrePex
 
 # resources
 resource MOTOR 1 D12
@@ -20,6 +20,7 @@ resource MOTOR 3 D13
 resource MOTOR 4 B05
 
 # feature
+feature TELEMETRY
 feature LED_STRIP
 
 # beacon
@@ -59,7 +60,7 @@ set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
 set dyn_lpf_gyro_min_hz = 400
 set dyn_lpf_gyro_max_hz = 1000
-set acc_calibration = 1,2,45,1
+set acc_calibration = 11,1,55,1
 set rc_smoothing_derivative_type = PT1
 set rc_smoothing_auto_smoothness = 40
 set dshot_bidir = ON
@@ -108,16 +109,16 @@ set brainfpv_osd_x_scale = 6
 set brainfpv_osd_font = 1
 set brainfpv_altitude_scale = 0
 set brainfpv_speed_scale = 0
-set name = TrPex
+set name = TrePex
 
 profile 0
 
 # profile 0
-set dyn_lpf_dterm_min_hz = 140
-set dyn_lpf_dterm_max_hz = 340
+set dyn_lpf_dterm_min_hz = 112
+set dyn_lpf_dterm_max_hz = 272
 set dyn_lpf_dterm_curve_expo = 8
 set dterm_lowpass_hz = 100
-set dterm_lowpass2_hz = 300
+set dterm_lowpass2_hz = 240
 set vbat_sag_compensation = 100
 set feedforward_transition = 70
 set iterm_relax_cutoff = 5
@@ -128,14 +129,14 @@ set throttle_boost_cutoff = 10
 set p_pitch = 51
 set i_pitch = 99
 set d_pitch = 40
-set f_pitch = 66
+set f_pitch = 74
 set p_roll = 46
 set i_roll = 94
 set d_roll = 36
-set f_roll = 59
+set f_roll = 69
 set p_yaw = 50
 set i_yaw = 99
-set f_yaw = 62
+set f_yaw = 69
 set d_min_roll = 0
 set d_min_pitch = 0
 set ff_interpolate_sp = AVERAGED_4
