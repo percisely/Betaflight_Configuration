@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.2.4 Oct 30 2020 / 15:33:32 (8cf4648da) MSP API: 1.43
+# Betaflight / RADIX (RADIX) 4.2.9 Jul 20 2021 / 10:00:49 (51db314cc) MSP API: 1.43
 
 # start the command batch
 batch start
@@ -8,7 +8,7 @@ batch start
 defaults nosave
 
 board_name RADIX
-mcu_id 0035001e3138510430343432
+mcu_id 003000483138510430343432
 signature 
 
 # name: grApex
