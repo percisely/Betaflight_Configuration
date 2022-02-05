@@ -30,22 +30,22 @@ beacon RX_SET
 map TAER1234
 
 # led
-led 0 6,5:S:CO:13
-led 1 6,6::CO:13
-led 2 7,6::CO:11
-led 3 7,5:S:CO:11
-led 4 8,5:S:CO:10
-led 5 8,6::CO:10
-led 6 9,6::CO:7
-led 7 9,5:S:CO:7
-led 8 10,5:S:CO:4
-led 9 10,6::CO:4
-led 10 11,6::CO:3
-led 11 11,5:S:CO:3
-led 12 12,5:S:CO:2
-led 13 12,6::CO:2
-led 14 13,6::CO:2
-led 15 13,5:S:CO:2
+led 0 6,5:S:CO:6
+led 1 6,6::CO:6
+led 2 7,6::CO:6
+led 3 7,5:S:CO:6
+led 4 8,5:S:CO:6
+led 5 8,6::CO:6
+led 6 9,6::CO:6
+led 7 9,5:S:CO:6
+led 8 10,5:S:CO:6
+led 9 10,6::CO:6
+led 10 11,6::CO:6
+led 11 11,5:S:CO:6
+led 12 12,5:S:CO:6
+led 13 12,6::CO:6
+led 14 13,6::CO:6
+led 15 13,5:S:CO:6
 
 # aux
 aux 0 0 2 1900 2100 0 0
@@ -60,7 +60,7 @@ set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
 set dyn_lpf_gyro_min_hz = 400
 set dyn_lpf_gyro_max_hz = 1000
-set acc_calibration = 11,1,55,1
+set acc_calibration = -19,-2,25,1
 set rc_smoothing_derivative_type = PT1
 set rc_smoothing_auto_smoothness = 40
 set dshot_bidir = ON
