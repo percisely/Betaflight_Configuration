@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX2 (RDX2) 4.2.6 Feb  8 2021 / 14:37:32 (fc5b1556f) MSP API: 1.43
+# Betaflight / RADIX2 (RDX2) 4.2.11 Jan 10 2022 / 15:52:12 (fb69e6ea8) MSP API: 1.43
 
 # start the command batch
 batch start
@@ -8,7 +8,7 @@ batch start
 defaults nosave
 
 board_name RADIX2
-mcu_id 0019002d3339510938303739
+mcu_id 002700333430510237373930
 signature 
 
 # name: TrePex
@@ -21,7 +21,6 @@ resource MOTOR 4 B05
 
 # feature
 feature TELEMETRY
-feature LED_STRIP
 
 # beacon
 beacon RX_SET
@@ -29,30 +28,16 @@ beacon RX_SET
 # map
 map TAER1234
 
-# led
-led 0 6,5:S:CO:6
-led 1 6,6::CO:6
-led 2 7,6::CO:6
-led 3 7,5:S:CO:6
-led 4 8,5:S:CO:6
-led 5 8,6::CO:6
-led 6 9,6::CO:6
-led 7 9,5:S:CO:6
-led 8 10,5:S:CO:6
-led 9 10,6::CO:6
-led 10 11,6::CO:6
-led 11 11,5:S:CO:6
-led 12 12,5:S:CO:6
-led 13 12,6::CO:6
-led 14 13,6::CO:6
-led 15 13,5:S:CO:6
+# serial
+serial 5 1 115200 57600 0 115200
 
 # aux
 aux 0 0 2 1900 2100 0 0
 aux 1 1 1 925 1050 0 0
-aux 2 13 0 1925 2100 0 0
+aux 2 13 1 925 1050 0 0
 aux 3 35 1 1450 1550 0 0
 aux 4 36 3 1925 2100 0 0
+aux 5 40 0 925 1050 0 0
 
 # master
 set gyro_lowpass2_hz = 500
@@ -60,7 +45,7 @@ set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
 set dyn_lpf_gyro_min_hz = 400
 set dyn_lpf_gyro_max_hz = 1000
-set acc_calibration = -19,-2,25,1
+set acc_calibration = 37,-47,58,1
 set rc_smoothing_derivative_type = PT1
 set rc_smoothing_auto_smoothness = 40
 set dshot_bidir = ON
@@ -84,14 +69,15 @@ set osd_tim_1_pos = 2080
 set osd_tim_2_pos = 33
 set osd_flymode_pos = 65
 set osd_throttle_pos = 233
+set osd_crosshairs_pos = 2253
 set osd_mah_drawn_pos = 192
 set osd_craft_name_pos = 362
 set osd_gps_speed_pos = 22
 set osd_gps_lon_pos = 369
 set osd_gps_lat_pos = 354
-set osd_gps_sats_pos = 2432
-set osd_home_dir_pos = 2094
-set osd_home_dist_pos = 2061
+set osd_gps_sats_pos = 384
+set osd_home_dir_pos = 46
+set osd_home_dist_pos = 13
 set osd_altitude_pos = 2455
 set osd_debug_pos = 387
 set osd_warnings_pos = 2377
@@ -105,7 +91,6 @@ set osd_stat_bbox = OFF
 set osd_stat_max_g_force = ON
 set osd_stat_min_link_quality = ON
 set gyro_rpm_notch_q = 900
-set brainfpv_osd_x_scale = 6
 set brainfpv_osd_font = 1
 set brainfpv_altitude_scale = 0
 set brainfpv_speed_scale = 0
