@@ -40,16 +40,16 @@ aux 4 36 3 1925 2100 0 0
 aux 5 40 0 925 1050 0 0
 
 # master
-set gyro_lowpass2_hz = 500
+set gyro_lowpass2_hz = 425
 set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
-set dyn_lpf_gyro_min_hz = 400
-set dyn_lpf_gyro_max_hz = 1000
+set dyn_lpf_gyro_min_hz = 340
+set dyn_lpf_gyro_max_hz = 850
 set acc_calibration = 37,-47,58,1
 set rc_smoothing_derivative_type = PT1
 set rc_smoothing_auto_smoothness = 40
 set dshot_bidir = ON
-set motor_pwm_protocol = DSHOT600
+set motor_pwm_protocol = DSHOT300
 set bat_capacity = 1100
 set vbat_max_cell_voltage = 440
 set beeper_dshot_beacon_tone = 3
@@ -131,10 +131,41 @@ set ff_boost = 0
 
 profile 1
 
+# profile 1
+set dyn_lpf_dterm_min_hz = 119
+set dyn_lpf_dterm_max_hz = 289
+set dyn_lpf_dterm_curve_expo = 8
+set dterm_lowpass_hz = 100
+set dterm_lowpass2_hz = 255
+set vbat_sag_compensation = 100
+set feedforward_transition = 70
+set iterm_relax_cutoff = 5
+set iterm_windup = 75
+set yaw_lowpass_hz = 50
+set throttle_boost = 2
+set throttle_boost_cutoff = 10
+set p_pitch = 60
+set i_pitch = 117
+set d_pitch = 55
+set f_pitch = 87
+set p_roll = 55
+set i_roll = 111
+set d_roll = 51
+set f_roll = 82
+set p_yaw = 59
+set i_yaw = 117
+set f_yaw = 82
+set d_min_roll = 0
+set d_min_pitch = 0
+set ff_interpolate_sp = AVERAGED_4
+set ff_spike_limit = 50
+set ff_smooth_factor = 50
+set ff_boost = 0
+
 profile 2
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
