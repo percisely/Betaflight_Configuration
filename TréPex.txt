@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX2 (RDX2) 4.3.0 Apr 28 2022 / 15:57:00 (e814090f2) MSP API: 1.44
+# Betaflight / RADIX2 (RDX2) 4.3.0 May 19 2022 / 13:18:42 (a809521ae) MSP API: 1.44
 
 # start the command batch
 batch start
@@ -70,7 +70,7 @@ set osd_flymode_pos = 65
 set osd_throttle_pos = 233
 set osd_crosshairs_pos = 205
 set osd_mah_drawn_pos = 192
-set osd_craft_name_pos = 362
+set osd_craft_name_pos = 2228
 set osd_gps_speed_pos = 22
 set osd_gps_lon_pos = 369
 set osd_gps_lat_pos = 354
@@ -80,7 +80,7 @@ set osd_home_dist_pos = 13
 set osd_altitude_pos = 2455
 set osd_debug_pos = 387
 set osd_warnings_pos = 2377
-set osd_avg_cell_voltage_pos = 2242
+set osd_avg_cell_voltage_pos = 2240
 set osd_esc_tmp_pos = 376
 set osd_stat_max_spd = OFF
 set osd_stat_battery = ON
