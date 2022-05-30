@@ -92,7 +92,6 @@ set osd_stat_bbox = OFF
 set osd_stat_max_g_force = ON
 set osd_stat_min_link_quality = ON
 set rpm_filter_q = 650
-set rpm_filter_min_hz = 80
 
 profile 0
 
@@ -115,9 +114,10 @@ set i_yaw = 69
 set f_yaw = 108
 set d_min_roll = 45
 set d_min_pitch = 58
-set thrust_linear = 30
+set thrust_linear = 25
 set feedforward_averaging = 3_POINT
 set feedforward_jitter_factor = 12
+set dyn_idle_min_rpm = 30
 set simplified_i_gain = 75
 set simplified_d_gain = 150
 set simplified_pi_gain = 115
