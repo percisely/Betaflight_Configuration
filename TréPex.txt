@@ -106,30 +106,14 @@ set dterm_lpf1_dyn_max_hz = 157
 set dterm_lpf1_static_hz = 157
 set dterm_lpf2_static_hz = 157
 set anti_gravity_gain = 4000
-set p_pitch = 59
-set i_pitch = 79
-set d_pitch = 58
-set f_pitch = 123
-set p_roll = 51
-set i_roll = 69
-set d_roll = 45
-set f_roll = 108
-set p_yaw = 51
-set i_yaw = 69
-set f_yaw = 108
-set d_min_roll = 45
-set d_min_pitch = 58
+set pidsum_limit = 1000
+set d_pitch = 34
+set d_roll = 30
 set thrust_linear = 25
 set feedforward_averaging = 3_POINT
 set feedforward_jitter_factor = 12
 set dyn_idle_min_rpm = 30
-set simplified_i_gain = 75
-set simplified_d_gain = 150
-set simplified_pi_gain = 115
 set simplified_dmax_gain = 0
-set simplified_feedforward_gain = 90
-set simplified_pitch_d_gain = 115
-set simplified_pitch_pi_gain = 110
 set simplified_dterm_filter = OFF
 set simplified_dterm_filter_multiplier = 105
 
@@ -169,7 +153,7 @@ set simplified_dterm_filter_multiplier = 105
 profile 2
 
 # restore original profile selection
-profile 1
+profile 0
 
 rateprofile 0
 
