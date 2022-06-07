@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX2 (RDX2) 4.3.0 May 19 2022 / 13:18:42 (a809521ae) MSP API: 1.44
+# Betaflight / RADIX2 (RDX2) 4.3.0 Jun  6 2022 / 12:44:33 (784cc5ae1) MSP API: 1.44
 
 # start the command batch
 batch start
