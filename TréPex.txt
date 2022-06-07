@@ -107,24 +107,24 @@ set dterm_lpf1_static_hz = 157
 set dterm_lpf2_static_hz = 157
 set anti_gravity_gain = 4000
 set pidsum_limit = 1000
-set p_pitch = 56
-set i_pitch = 101
-set d_pitch = 39
-set f_pitch = 158
-set p_roll = 54
-set i_roll = 96
-set d_roll = 34
-set f_roll = 151
-set p_yaw = 54
-set i_yaw = 96
-set f_yaw = 151
-set d_min_roll = 34
-set d_min_pitch = 39
+set p_pitch = 54
+set i_pitch = 97
+set d_pitch = 37
+set f_pitch = 151
+set p_roll = 51
+set i_roll = 92
+set d_roll = 33
+set f_roll = 145
+set p_yaw = 51
+set i_yaw = 92
+set f_yaw = 145
+set d_min_roll = 33
+set d_min_pitch = 37
 set thrust_linear = 25
 set feedforward_averaging = 3_POINT
 set feedforward_jitter_factor = 12
 set dyn_idle_min_rpm = 30
-set simplified_master_multiplier = 115
+set simplified_master_multiplier = 110
 set simplified_pi_gain = 105
 set simplified_dmax_gain = 0
 set simplified_feedforward_gain = 110
@@ -208,9 +208,13 @@ set throttle_limit_percent = 90
 rateprofile 2
 
 # rateprofile 2
-set yaw_rc_rate = 10
-set roll_expo = 25
-set pitch_expo = 25
+set thr_mid = 35
+set yaw_rc_rate = 11
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_srate = 80
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 89
 
 rateprofile 3
 
