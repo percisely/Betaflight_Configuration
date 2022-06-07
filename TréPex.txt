@@ -40,7 +40,7 @@ aux 5 40 0 925 1050 0 0
 # master
 set gyro_lpf1_static_hz = 437
 set gyro_lpf2_static_hz = 0
-set dyn_notch_count = 1
+set dyn_notch_count = 0
 set dyn_notch_min_hz = 200
 set dyn_notch_max_hz = 500
 set gyro_lpf1_dyn_min_hz = 0
@@ -107,13 +107,27 @@ set dterm_lpf1_static_hz = 157
 set dterm_lpf2_static_hz = 157
 set anti_gravity_gain = 4000
 set pidsum_limit = 1000
-set d_pitch = 34
-set d_roll = 30
+set p_pitch = 56
+set i_pitch = 101
+set d_pitch = 39
+set f_pitch = 158
+set p_roll = 54
+set i_roll = 96
+set d_roll = 34
+set f_roll = 151
+set p_yaw = 54
+set i_yaw = 96
+set f_yaw = 151
+set d_min_roll = 34
+set d_min_pitch = 39
 set thrust_linear = 25
 set feedforward_averaging = 3_POINT
 set feedforward_jitter_factor = 12
 set dyn_idle_min_rpm = 30
+set simplified_master_multiplier = 115
+set simplified_pi_gain = 105
 set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 110
 set simplified_dterm_filter = OFF
 set simplified_dterm_filter_multiplier = 105
 
@@ -193,6 +207,11 @@ set throttle_limit_percent = 90
 
 rateprofile 2
 
+# rateprofile 2
+set yaw_rc_rate = 10
+set roll_expo = 25
+set pitch_expo = 25
+
 rateprofile 3
 
 rateprofile 4
@@ -200,7 +219,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
