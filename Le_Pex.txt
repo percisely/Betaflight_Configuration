@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.2.0 Jun 17 2020 / 13:04:07 (4064a2fb5) MSP API: 1.43
+# Betaflight / RADIX (RADIX) 4.2.4 Oct 30 2020 / 15:33:32 (8cf4648da) MSP API: 1.43
 
 # start the command batch
 batch start
@@ -8,7 +8,7 @@ batch start
 defaults nosave
 
 board_name RADIX
-mcu_id 005000283038511130333332
+mcu_id 0035001e3138510430343432
 signature 
 
 # name: Le_Pex
@@ -55,14 +55,14 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 200 500
 
 # master
-set gyro_lowpass_hz = 0
-set gyro_lowpass2_hz = 0
+set gyro_lowpass2_hz = 375
 set dyn_notch_width_percent = 0
 set dyn_notch_q = 250
 set dyn_notch_min_hz = 100
 set dyn_notch_max_hz = 400
-set dyn_lpf_gyro_min_hz = 0
-set acc_calibration = -90,-190,19,1
+set dyn_lpf_gyro_min_hz = 300
+set dyn_lpf_gyro_max_hz = 750
+set acc_calibration = 304,-185,-125,1
 set min_throttle = 1070
 set dshot_bidir = ON
 set use_unsynced_pwm = OFF
@@ -125,23 +125,21 @@ set name = Le_Pex
 profile 0
 
 # profile 0
-set dyn_lpf_dterm_min_hz = 0
-set dterm_lowpass_type = BIQUAD
-set dterm_lowpass_hz = 100
-set dterm_lowpass2_hz = 0
-set pidsum_limit = 1000
-set pidsum_limit_yaw = 1000
-set p_pitch = 60
-set i_pitch = 117
-set d_pitch = 42
-set f_pitch = 124
-set p_roll = 55
-set i_roll = 111
-set d_roll = 39
-set f_roll = 117
-set p_yaw = 59
-set i_yaw = 117
-set f_yaw = 117
+set dyn_lpf_dterm_min_hz = 105
+set dyn_lpf_dterm_max_hz = 255
+set dterm_lowpass2_hz = 225
+set acro_trainer_angle_limit = 21
+set p_pitch = 51
+set i_pitch = 108
+set d_pitch = 41
+set f_pitch = 114
+set p_roll = 50
+set i_roll = 102
+set d_roll = 36
+set f_roll = 108
+set p_yaw = 54
+set i_yaw = 108
+set f_yaw = 108
 set d_min_roll = 0
 set d_min_pitch = 0
 
