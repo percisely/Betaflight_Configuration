@@ -1,5 +1,5 @@
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.2.4 Oct 20 2020 / 08:20:06 (fbcaf8c50) MSP API: 1.43
+# Betaflight / STM32F7X2 (S7X2) 4.3.0 Jun 14 2022 / 00:50:37 (229ac66) MSP API: 1.44
 # config: manufacturer_id: FLWO, board_name: FLYWOOF7DUAL, version: 71126446, date: 2022-05-21T22:32:16Z
 
 # start the command batch
@@ -13,8 +13,6 @@ manufacturer_id FLWO
 mcu_id 003c00213756500620393558
 signature 
 
-# name: Le_Pex
-
 # resources
 resource MOTOR 1 B03
 resource MOTOR 2 B01
@@ -26,15 +24,15 @@ feature -SOFTSERIAL
 feature -RX_PARALLEL_PWM
 feature -LED_STRIP
 
+# serial
+serial 2 1 115200 57600 0 115200
+serial 3 64 115200 57600 0 115200
+
 # beacon
 beacon RX_SET
 
 # map
 map TAER1234
-
-# serial
-serial 2 1 115200 57600 0 115200
-serial 3 64 115200 57600 0 115200
 
 # aux
 aux 0 0 2 1900 2100 0 0
@@ -45,14 +43,7 @@ aux 4 36 3 1925 2100 0 0
 aux 5 40 0 925 1050 0 0
 
 # master
-set gyro_lowpass2_hz = 375
-set dyn_notch_width_percent = 0
-set dyn_notch_q = 250
-set dyn_notch_min_hz = 100
-set dyn_notch_max_hz = 400
-set dyn_lpf_gyro_min_hz = 300
-set dyn_lpf_gyro_max_hz = 750
-set acc_calibration = -7,21,-66,1
+set acc_calibration = -35,48,-4051,1
 set mag_hardware = NONE
 set serialrx_provider = CRSF
 set min_throttle = 1070
@@ -61,8 +52,7 @@ set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
 set motor_pwm_rate = 480
 set align_board_roll = 180
-set align_board_pitch = 180
-set align_board_yaw = 270
+set align_board_yaw = 90
 set bat_capacity = 1100
 set vbat_max_cell_voltage = 440
 set ibata_scale = 117
@@ -104,34 +94,11 @@ set osd_stat_bbox = OFF
 set osd_stat_max_g_force = ON
 set osd_stat_min_link_quality = ON
 set debug_mode = GYRO_SCALED
-set vcd_video_system = NTSC
-set gyro_1_sensor_align = DEFAULT
 set gyro_1_align_pitch = 1800
 set gyro_1_align_yaw = 1800
 set gyro_2_align_yaw = 2700
-set gyro_rpm_notch_q = 900
-set name = Le_Pex
 
 profile 0
-
-# profile 0
-set dyn_lpf_dterm_min_hz = 105
-set dyn_lpf_dterm_max_hz = 255
-set dterm_lowpass2_hz = 225
-set acro_trainer_angle_limit = 21
-set p_pitch = 51
-set i_pitch = 108
-set d_pitch = 41
-set f_pitch = 114
-set p_roll = 50
-set i_roll = 102
-set d_roll = 36
-set f_roll = 108
-set p_yaw = 54
-set i_yaw = 108
-set f_yaw = 108
-set d_min_roll = 0
-set d_min_pitch = 0
 
 profile 1
 
@@ -141,20 +108,6 @@ profile 2
 profile 0
 
 rateprofile 0
-
-# rateprofile 0
-set thr_expo = 10
-set roll_rc_rate = 200
-set pitch_rc_rate = 180
-set yaw_rc_rate = 170
-set roll_expo = 80
-set pitch_expo = 80
-set yaw_expo = 50
-set roll_srate = 44
-set pitch_srate = 44
-set yaw_srate = 50
-set throttle_limit_type = SCALE
-set throttle_limit_percent = 80
 
 rateprofile 1
 
