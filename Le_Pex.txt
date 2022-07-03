@@ -43,7 +43,7 @@ aux 4 36 3 1925 2100 0 0
 aux 5 40 0 925 1050 0 0
 
 # master
-set acc_calibration = -35,48,-4051,1
+set acc_calibration = -15,0,-74,1
 set mag_hardware = NONE
 set serialrx_provider = CRSF
 set min_throttle = 1070
@@ -51,6 +51,7 @@ set dshot_bidir = ON
 set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
 set motor_pwm_rate = 480
+set motor_output_reordering = 3,1,2,0,4,5,6,7
 set align_board_roll = 180
 set align_board_yaw = 90
 set bat_capacity = 1100
@@ -99,6 +100,24 @@ set gyro_1_align_yaw = 1800
 set gyro_2_align_yaw = 2700
 
 profile 0
+
+# profile 0
+set p_pitch = 51
+set i_pitch = 92
+set d_pitch = 37
+set f_pitch = 137
+set p_roll = 49
+set i_roll = 88
+set d_roll = 33
+set f_roll = 132
+set p_yaw = 49
+set i_yaw = 88
+set f_yaw = 132
+set d_min_roll = 33
+set d_min_pitch = 37
+set thrust_linear = 20
+set simplified_master_multiplier = 110
+set simplified_dmax_gain = 0
 
 profile 1
 
