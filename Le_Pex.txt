@@ -43,13 +43,19 @@ aux 4 36 3 1925 2100 0 0
 aux 5 40 0 925 1050 0 0
 
 # master
-set acc_calibration = -15,0,-74,1
+set gyro_lpf1_static_hz = 437
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 0
+set dyn_notch_min_hz = 200
+set dyn_notch_max_hz = 500
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 875
+set acc_calibration = 5,27,-60,1
 set mag_hardware = NONE
 set serialrx_provider = CRSF
 set min_throttle = 1070
 set dshot_bidir = ON
 set use_unsynced_pwm = OFF
-set motor_pwm_protocol = DSHOT300
 set motor_pwm_rate = 480
 set motor_output_reordering = 3,1,2,0,4,5,6,7
 set align_board_roll = 180
@@ -61,6 +67,7 @@ set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
 set pid_process_denom = 2
+set simplified_gyro_filter_multiplier = 175
 set report_cell_voltage = ON
 set osd_units = IMPERIAL
 set osd_warn_core_temp = OFF
@@ -102,22 +109,35 @@ set gyro_2_align_yaw = 2700
 profile 0
 
 # profile 0
-set p_pitch = 51
-set i_pitch = 92
+set dterm_lpf1_dyn_min_hz = 78
+set dterm_lpf1_dyn_max_hz = 157
+set dterm_lpf1_static_hz = 157
+set dterm_lpf2_static_hz = 157
+set anti_gravity_gain = 4000
+set pidsum_limit = 1000
+set p_pitch = 54
+set i_pitch = 97
 set d_pitch = 37
-set f_pitch = 137
-set p_roll = 49
-set i_roll = 88
+set f_pitch = 151
+set p_roll = 51
+set i_roll = 92
 set d_roll = 33
-set f_roll = 132
-set p_yaw = 49
-set i_yaw = 88
-set f_yaw = 132
+set f_roll = 145
+set p_yaw = 51
+set i_yaw = 92
+set f_yaw = 145
 set d_min_roll = 33
 set d_min_pitch = 37
-set thrust_linear = 20
+set thrust_linear = 25
+set feedforward_averaging = 3_POINT
+set feedforward_jitter_factor = 12
+set dyn_idle_min_rpm = 30
 set simplified_master_multiplier = 110
+set simplified_pi_gain = 105
 set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 105
 
 profile 1
 
@@ -128,9 +148,27 @@ profile 0
 
 rateprofile 0
 
+# rateprofile 0
+set thr_mid = 35
+set yaw_rc_rate = 11
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_srate = 80
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 89
+
 rateprofile 1
 
 rateprofile 2
+
+# rateprofile 2
+set thr_mid = 35
+set yaw_rc_rate = 11
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_srate = 80
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 89
 
 rateprofile 3
 
@@ -139,7 +177,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
