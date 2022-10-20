@@ -1,5 +1,5 @@
 # version
-# Betaflight / RADIX (RADIX) 4.2.9 Jul 20 2021 / 10:00:49 (51db314cc) MSP API: 1.43
+# Betaflight / RADIX (RADIX) 4.3.1 Jul 21 2022 / 10:58:40 (abc481796) MSP API: 1.44
 
 # start the command batch
 batch start
@@ -19,29 +19,14 @@ resource MOTOR 2 A02
 resource MOTOR 3 A15
 resource MOTOR 4 A03
 
-# feature
-feature TELEMETRY
-feature LED_STRIP
+# serial
+serial 5 1 115200 57600 0 115200
 
 # beacon
 beacon RX_SET
 
 # map
 map TAER1234
-
-# serial
-serial 5 1 115200 57600 0 115200
-
-# led
-led 0 3,4:SD:CO:2
-led 1 3,6::CO:2
-led 2 4,6::CO:3
-led 3 5,6::CO:4
-led 4 6,6::CO:5
-led 5 7,6::CO:7
-led 6 8,6::CO:9
-led 7 9,6::CO:11
-led 8 10,6::CO:13
 
 # aux
 aux 0 0 2 1900 2100 0 0
@@ -51,14 +36,15 @@ aux 3 35 1 1450 1550 0 0
 aux 4 36 3 1925 2100 0 0
 
 # master
-set gyro_lowpass2_hz = 400
-set dyn_notch_width_percent = 0
-set dyn_notch_q = 1000
-set dyn_notch_min_hz = 90
-set dyn_notch_max_hz = 350
-set dyn_lpf_gyro_min_hz = 320
-set dyn_lpf_gyro_max_hz = 800
-set acc_calibration = 66,36,4,1
+set gyro_lpf1_static_hz = 437
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 0
+set dyn_notch_min_hz = 200
+set dyn_notch_max_hz = 500
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 875
+set acc_calibration = 15,22,46,1
+set blackbox_sample_rate = 1/2
 set dshot_bidir = ON
 set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
@@ -68,32 +54,36 @@ set ibata_scale = 117
 set beeper_dshot_beacon_tone = 3
 set yaw_motors_reversed = ON
 set small_angle = 180
-set thrust_linear = 20
+set simplified_gyro_filter_multiplier = 175
 set report_cell_voltage = ON
 set osd_units = IMPERIAL
 set osd_warn_core_temp = OFF
+set osd_warn_link_quality = ON
 set osd_cap_alarm = 500
 set osd_alt_alarm = 400
 set osd_tim1 = 1281
 set osd_vbat_pos = 2048
-set osd_rssi_pos = 2265
-set osd_link_quality_pos = 280
-set osd_tim_1_pos = 2080
+set osd_rssi_pos = 2267
+set osd_link_quality_pos = 2328
+set osd_link_tx_power_pos = 55
+set osd_tim_1_pos = 32
 set osd_tim_2_pos = 33
 set osd_flymode_pos = 65
 set osd_throttle_pos = 233
+set osd_crosshairs_pos = 205
+set osd_current_pos = 14368
 set osd_mah_drawn_pos = 192
-set osd_craft_name_pos = 362
+set osd_craft_name_pos = 2449
 set osd_gps_speed_pos = 22
 set osd_gps_lon_pos = 369
 set osd_gps_lat_pos = 354
-set osd_gps_sats_pos = 2432
-set osd_home_dir_pos = 2094
-set osd_home_dist_pos = 2061
-set osd_altitude_pos = 2455
+set osd_gps_sats_pos = 384
+set osd_home_dir_pos = 46
+set osd_home_dist_pos = 13
+set osd_altitude_pos = 2071
 set osd_debug_pos = 387
-set osd_warnings_pos = 2377
-set osd_avg_cell_voltage_pos = 2242
+set osd_warnings_pos = 329
+set osd_avg_cell_voltage_pos = 2443
 set osd_esc_tmp_pos = 376
 set osd_stat_max_spd = OFF
 set osd_stat_battery = ON
@@ -102,107 +92,89 @@ set osd_stat_max_alt = ON
 set osd_stat_bbox = OFF
 set osd_stat_max_g_force = ON
 set osd_stat_min_link_quality = ON
-set gyro_rpm_notch_q = 900
-set brainfpv_osd_white_level = 100
-set brainfpv_osd_black_level = 40
-set brainfpv_osd_x_scale = 6
-set brainfpv_osd_font = 1
-set brainfpv_altitude_scale = 0
-set brainfpv_speed_scale = 0
+set debug_mode = GYRO_SCALED
+set vcd_video_system = PAL
+set rpm_filter_q = 650
+set rpm_filter_fade_range_hz = 100
 set name = grApex
 
 profile 0
 
 # profile 0
-set dyn_lpf_dterm_min_hz = 112
-set dyn_lpf_dterm_max_hz = 272
-set dterm_lowpass2_hz = 240
-set anti_gravity_gain = 5000
-set feedforward_transition = 40
-set p_pitch = 51
-set i_pitch = 99
-set d_pitch = 46
-set f_pitch = 74
-set p_roll = 46
-set i_roll = 94
-set d_roll = 43
-set f_roll = 69
-set p_yaw = 50
-set i_yaw = 99
-set f_yaw = 69
-set d_min_roll = 0
-set d_min_pitch = 0
-set ff_interpolate_sp = AVERAGED_3
+set dterm_lpf1_dyn_min_hz = 78
+set dterm_lpf1_dyn_max_hz = 157
+set dterm_lpf1_static_hz = 157
+set dterm_lpf2_static_hz = 157
+set anti_gravity_gain = 4000
+set pidsum_limit = 1000
+set p_pitch = 54
+set i_pitch = 97
+set d_pitch = 37
+set f_pitch = 151
+set p_roll = 51
+set i_roll = 92
+set d_roll = 33
+set f_roll = 145
+set p_yaw = 51
+set i_yaw = 92
+set f_yaw = 145
+set d_min_roll = 33
+set d_min_pitch = 37
+set thrust_linear = 25
+set feedforward_averaging = 3_POINT
+set feedforward_jitter_factor = 12
+set dyn_idle_min_rpm = 30
+set simplified_master_multiplier = 110
+set simplified_pi_gain = 105
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 110
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 105
 
 profile 1
 
 # profile 1
-set dyn_lpf_dterm_min_hz = 105
-set dyn_lpf_dterm_max_hz = 255
-set dterm_lowpass2_hz = 225
-set anti_gravity_gain = 5000
-set feedforward_transition = 40
-set p_pitch = 51
-set i_pitch = 99
-set d_pitch = 46
-set f_pitch = 70
-set p_roll = 46
-set i_roll = 94
-set d_roll = 43
-set f_roll = 70
-set p_yaw = 50
-set i_yaw = 99
-set f_yaw = 70
-set d_min_roll = 0
-set d_min_pitch = 0
-set ff_interpolate_sp = AVERAGED_3
+set dterm_lpf1_dyn_min_hz = 78
+set dterm_lpf1_dyn_max_hz = 157
+set dterm_lpf1_dyn_expo = 7
+set dterm_lpf1_static_hz = 78
+set dterm_lpf2_static_hz = 157
+set anti_gravity_gain = 4000
+set p_pitch = 56
+set i_pitch = 101
+set d_pitch = 48
+set f_pitch = 96
+set p_roll = 54
+set i_roll = 96
+set d_roll = 42
+set f_roll = 92
+set p_yaw = 54
+set i_yaw = 96
+set f_yaw = 92
+set d_min_roll = 42
+set d_min_pitch = 48
+set thrust_linear = 25
+set feedforward_averaging = 3_POINT
+set feedforward_jitter_factor = 12
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 110
+set simplified_d_gain = 130
+set simplified_pi_gain = 110
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 70
+set simplified_dterm_filter_multiplier = 105
 
 profile 2
-
-# profile 2
-set dyn_lpf_dterm_min_hz = 112
-set dyn_lpf_dterm_max_hz = 272
-set dterm_lowpass2_hz = 240
-set feedforward_transition = 40
-set p_pitch = 51
-set i_pitch = 99
-set d_pitch = 35
-set f_pitch = 74
-set p_roll = 46
-set i_roll = 94
-set d_roll = 33
-set f_roll = 69
-set p_yaw = 50
-set i_yaw = 99
-set f_yaw = 69
-set d_min_roll = 0
-set d_min_pitch = 0
 
 # restore original profile selection
-profile 2
+profile 0
 
 rateprofile 0
 
 # rateprofile 0
-set thr_mid = 40
+set thr_mid = 35
 set thr_expo = 10
-set roll_rc_rate = 200
-set pitch_rc_rate = 180
-set yaw_rc_rate = 160
-set roll_expo = 80
-set pitch_expo = 80
-set yaw_expo = 50
-set roll_srate = 44
-set pitch_srate = 44
-set yaw_srate = 60
-set tpa_rate = 80
-set throttle_limit_type = SCALE
-set throttle_limit_percent = 90
-
-rateprofile 1
-
-# rateprofile 1
-set thr_expo = 10
+set rates_type = BETAFLIGHT
 set roll_rc_rate = 200
 set pitch_rc_rate = 200
 set yaw_rc_rate = 160
@@ -212,9 +184,37 @@ set yaw_expo = 50
 set roll_srate = 44
 set pitch_srate = 44
 set yaw_srate = 60
-set tpa_rate = 80
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 90
+
+rateprofile 1
+
+# rateprofile 1
+set thr_mid = 35
+set thr_expo = 10
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 200
+set pitch_rc_rate = 200
+set yaw_rc_rate = 160
+set roll_expo = 80
+set pitch_expo = 80
+set yaw_expo = 50
+set roll_srate = 44
+set pitch_srate = 44
+set yaw_srate = 60
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 90
 
 rateprofile 2
+
+# rateprofile 2
+set thr_mid = 35
+set yaw_rc_rate = 11
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_srate = 80
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 89
 
 rateprofile 3
 
@@ -223,7 +223,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
